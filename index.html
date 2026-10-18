@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이형우 — 자기소개</title>
+  <meta name="description" content="코드와 커피를 좋아하는 이형우의 자기소개 카드" />
+  <!-- Pretendard는 Google Fonts에 없어 jsDelivr CDN으로 로드 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <style>
+    :root {
+      --bg-from: #f8fafc;
+      --bg-to: #e0f2fe;
+      --accent: #0ea5e9;
+      --accent-strong: #0284c7;
+      --accent-soft: rgba(14, 165, 233, 0.1);
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: rgba(255, 255, 255, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.6);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 24px 16px;
+      font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: var(--text);
+      background-color: var(--bg-from);
+      background-image: linear-gradient(160deg, var(--bg-from) 0%, var(--bg-to) 100%);
+      background-attachment: fixed;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+
+    /* 유리 효과가 잘 보이도록 뒤에 은은한 빛 번짐 */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: -1;
+    }
+    body::before { top: 10%; left: 50%; transform: translateX(-90%); background: rgba(14, 165, 233, 0.22); }
+    body::after { bottom: 8%; left: 50%; transform: translateX(-10%); background: rgba(125, 211, 252, 0.3); }
+
+    /* ---------- 떠다니는 점 ---------- */
+    .dots {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--c);
+      opacity: var(--o);
+      animation: drift var(--dur) ease-in-out var(--delay) infinite alternate;
+      will-change: transform;
+    }
+    @keyframes drift {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(calc(var(--dx) * 0.4), var(--dy)); }
+      100% { transform: translate(var(--dx), calc(var(--dy) * 0.3)); }
+    }
+
+    /* ---------- 카드 ---------- */
+    .card {
+      width: 100%;
+      max-width: 400px;
+      padding: 44px 36px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 20px 48px -16px rgba(14, 116, 144, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 32px 64px -20px rgba(14, 116, 144, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    /* 아바타 */
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #38bdf8 0%, var(--accent) 50%, var(--accent-strong) 100%);
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.85), 0 10px 24px -8px rgba(14, 165, 233, 0.6);
+      user-select: none;
+    }
+
+    /* 이름 · 소개 */
+    .name {
+      margin: 24px 0 6px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .bio {
+      margin: 0;
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    /* 관심 태그 (리스트 마커 제거) */
+    .tags {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .tags li {
+      list-style: none;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent-strong);
+      background: var(--accent-soft);
+      border: 1px solid rgba(14, 165, 233, 0.2);
+      cursor: default;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .tags li::marker { content: none; }
+    /* 카드 호버 시 태그가 왼쪽부터 순서대로 떠오르며 나타남 */
+    .card:hover .tags li {
+      animation: tag-rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      animation-delay: calc(var(--i, 0) * 90ms);
+    }
+    @keyframes tag-rise {
+      0%   { opacity: 0; transform: translateY(10px); }
+      60%  { opacity: 1; transform: translateY(-3px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .tags li:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* 구분선 */
+    .divider {
+      width: 100%;
+      height: 1px;
+      margin: 28px 0 24px;
+      border: 0;
+      background: linear-gradient(90deg, transparent, rgba(15, 23, 42, 0.1), transparent);
+    }
+
+    /* 소셜 링크 */
+    .socials {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 48px;
+      padding: 0 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      transition: border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .social-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .click-count {
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      transition: color 0.2s;
+    }
+    .social-btn:hover .click-count { color: var(--accent-strong); }
+    .social-btn:hover {
+      color: var(--accent-strong);
+      border-color: rgba(14, 165, 233, 0.45);
+      box-shadow: 0 6px 16px -8px rgba(14, 165, 233, 0.5);
+      transform: translateY(-1px);
+    }
+    .social-btn:focus-visible,
+    .tags li:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .social-btn, .tags li { transition: none; }
+      .card:hover, .social-btn:hover { transform: none; }
+      .dot, .card:hover .tags li { animation: none; }
+    }
+
+    /* ---------- 모바일 (480px 이하) ---------- */
+    @media (max-width: 480px) {
+      .card { padding: 36px 22px 26px; border-radius: 20px; }
+      .avatar { width: 76px; height: 76px; font-size: 30px; }
+      .name { margin-top: 20px; font-size: 23px; }
+      .bio { font-size: 15px; }
+      .divider { margin: 24px 0 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dots" aria-hidden="true"></div>
+
+  <main class="card">
+    <div class="avatar" aria-hidden="true">이</div>
+
+    <h1 class="name">이형우</h1>
+    <p class="bio">코드와 커피를 좋아합니다</p>
+
+    <ul class="tags" aria-label="관심 태그">
+      <li style="--i:0">커피</li>
+      <li style="--i:1">코드</li>
+    </ul>
+
+    <hr class="divider" />
+
+    <nav class="socials" aria-label="소셜 링크">
+      <a class="social-btn" data-link-id="github" href="https://github.com/note21360-svg" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        GitHub
+        <span class="click-count" aria-label="클릭수">0회</span>
+      </a>
+      <a class="social-btn" data-link-id="linkedin" href="https://www.linkedin.com/in/%ED%98%95%EC%9A%B0-%EC%9D%B4-0b9766443/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        LinkedIn
+        <span class="click-count" aria-label="클릭수">0회</span>
+      </a>
+    </nav>
+  </main>
+
+  <script>
+    // 카드 뒤 배경에 천천히 떠다니는 점 30개 생성
+    (() => {
+      const wrap = document.querySelector('.dots');
+      const colors = ['#0ea5e9', '#38bdf8', '#7dd3fc', '#0284c7'];
+      const rand = (min, max) => Math.random() * (max - min) + min;
+      const frag = document.createDocumentFragment();
+
+      for (let i = 0; i < 30; i++) {
+        const dot = document.createElement('span');
+        const size = rand(4, 10);
+        const dur = rand(14, 28);
+        dot.className = 'dot';
+        dot.style.cssText = [
+          `width:${size}px`,
+          `height:${size}px`,
+          `left:${rand(0, 100)}%`,
+          `top:${rand(0, 100)}%`,
+          `--c:${colors[i % colors.length]}`,
+          `--o:${rand(0.2, 0.5).toFixed(2)}`,
+          `--dx:${rand(-60, 60).toFixed(0)}px`,
+          `--dy:${rand(-80, 80).toFixed(0)}px`,
+          `--dur:${dur.toFixed(1)}s`,
+          `--delay:-${rand(0, dur).toFixed(1)}s`
+        ].join(';');
+        frag.appendChild(dot);
+      }
+      wrap.appendChild(frag);
+    })();
+
+    // 링크 클릭수: 페이지 로드 시 한 번에 조회, 클릭 시 +1
+    (() => {
+      const buttons = document.querySelectorAll('[data-link-id]');
+      const setCount = (btn, n) => { btn.querySelector('.click-count').textContent = `${n}회`; };
+
+      fetch('/api/clicks')
+        .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+        .then((counts) => {
+          buttons.forEach((btn) => setCount(btn, counts[btn.dataset.linkId] ?? 0));
+        })
+        .catch((err) => console.warn('클릭수를 불러오지 못했습니다:', err));
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.linkId;
+          const label = btn.querySelector('.click-count');
+          // 즉시 +1 표시 후, 서버 값으로 맞춤 (새 탭이 열려도 요청이 끊기지 않도록 keepalive)
+          setCount(btn, (parseInt(label.textContent, 10) || 0) + 1);
+          fetch(`/api/clicks/${id}`, { method: 'POST', keepalive: true })
+            .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+            .then((data) => setCount(btn, data.clicks))
+            .catch((err) => console.warn('클릭수 저장 실패:', err));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
