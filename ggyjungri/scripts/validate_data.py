@@ -1,7 +1,7 @@
 """
 data/ 폴더의 JSON 데이터를 점검하는 스크립트입니다. (PRD 9장)
 
-실행 방법 (jhggyjungri 폴더에서):
+실행 방법 (ggyjungri 폴더에서):
     python3 scripts/validate_data.py
 
 - 오류가 하나라도 있으면 마지막에 "오류 N건"을 출력하고 종료 코드 1로 끝납니다.

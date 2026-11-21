@@ -18,4 +18,4 @@ npm run build        # 배포용 빌드 확인
 ```
 
 ## Vercel 배포
-Vercel에서 새 프로젝트를 만들고 **Root Directory를 `jhggyjungri`** 로 지정합니다. 프레임워크는 Next.js로 자동 인식됩니다.
+Vercel에서 새 프로젝트를 만들고 **Root Directory를 `ggyjungri`** 로 지정합니다. 프레임워크는 Next.js로 자동 인식됩니다.
