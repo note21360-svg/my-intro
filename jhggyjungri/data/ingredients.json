@@ -1,0 +1,17 @@
+[
+  { "id": "apap", "class": "ap", "ko": "아세트아미노펜", "en": "Acetaminophen", "sedating": false, "pregnancyDUR2": false },
+  { "id": "ibu", "class": "ns", "ko": "이부프로펜", "en": "Ibuprofen", "sedating": false, "pregnancyDUR2": true },
+  { "id": "cpm", "class": "ah", "ko": "클로르페니라민말레산염", "en": "Chlorpheniramine maleate", "sedating": true, "pregnancyDUR2": false },
+  { "id": "dph", "class": "ah", "ko": "디펜히드라민염산염", "en": "Diphenhydramine HCl", "sedating": true, "pregnancyDUR2": false },
+  { "id": "tpl", "class": "ah", "ko": "트리프롤리딘염산염수화물", "en": "Triprolidine HCl hydrate", "sedating": true, "pregnancyDUR2": false },
+  { "id": "phe", "class": "dc", "ko": "페닐레프린염산염", "en": "Phenylephrine HCl", "sedating": false, "pregnancyDUR2": true },
+  { "id": "pse", "class": "dc", "ko": "슈도에페드린염산염", "en": "Pseudoephedrine HCl", "sedating": false, "pregnancyDUR2": true },
+  { "id": "mep", "class": "cg", "ko": "DL-메틸에페드린염산염", "en": "DL-Methylephedrine HCl", "sedating": false, "pregnancyDUR2": false, "notes": "KPIC 분류상 기관지확장제이나 사용자 결정에 따라 진해제로 분류" },
+  { "id": "dxm", "class": "cg", "ko": "덱스트로메토르판브롬화수소산염수화물", "en": "Dextromethorphan HBr hydrate", "sedating": false, "pregnancyDUR2": false },
+  { "id": "ptx", "class": "cg", "ko": "펜톡시베린시트르산염", "en": "Pentoxyverine citrate", "sedating": false, "pregnancyDUR2": false },
+  { "id": "tip", "class": "cg", "ko": "티페피딘시트르산염", "en": "Tipepidine citrate", "sedating": false, "pregnancyDUR2": false },
+  { "id": "nos", "class": "cg", "ko": "노스카핀염산염수화물", "en": "Noscapine HCl hydrate", "sedating": false, "pregnancyDUR2": false },
+  { "id": "gua", "class": "ex", "ko": "구아이페네신", "en": "Guaifenesin", "sedating": false, "pregnancyDUR2": true },
+  { "id": "brh", "class": "ex", "ko": "브롬헥신염산염", "en": "Bromhexine HCl", "sedating": false, "pregnancyDUR2": false },
+  { "id": "caf", "class": "cf", "ko": "카페인무수물", "en": "Caffeine anhydrous", "sedating": false, "pregnancyDUR2": false, "caffeine": true }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": "pancol", "name": "판콜", "maker": "동화약품", "homepage": "http://www.dong-wha.co.kr" },
+  { "id": "panpyrin", "name": "판피린", "maker": "동아제약", "homepage": "https://www.dapharm.com" },
+  { "id": "coldprofen", "name": "콜드프로펜", "maker": "동국제약", "homepage": "https://www.dkpharm.co.kr" }
+]

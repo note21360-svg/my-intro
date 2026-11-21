@@ -1,0 +1,196 @@
+[
+  {
+    "id": "pancol-s-liq",
+    "series": "pancol",
+    "name": "판콜에스내복액",
+    "mfdsCode": "198900672",
+    "kpicId": "A11A0570A0353",
+    "form": "액제 (경구 내용액제)",
+    "pack": "30mL/병 × 5",
+    "unit": "병",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "성인 용법만 기재 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "성인 1회 30mL, 1일 3회 식후 30분",
+    "ingredients": {
+      "apap": 300,
+      "caf": 30,
+      "cpm": 2.5,
+      "gua": 83.3,
+      "mep": 17.5
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=198900672",
+      "kpic": "https://health.kr/drug/A11A0570A0353",
+      "maker": null
+    },
+    "checkedAt": "2026-11-21",
+    "notes": ""
+  },
+  {
+    "id": "panpyrin-q-liq",
+    "series": "panpyrin",
+    "name": "판피린큐액",
+    "mfdsCode": "200700547",
+    "kpicId": "A11AKP08F0397",
+    "form": "액제 (경구 내용액제)",
+    "pack": "20mL/병 × 5",
+    "unit": "병",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "성인 용법만 기재 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "성인 1회 20mL, 1일 3회 식후 30분",
+    "ingredients": {
+      "apap": 300,
+      "caf": 30,
+      "cpm": 2.5,
+      "gua": 42,
+      "tip": 10,
+      "mep": 18
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200700547",
+      "kpic": "https://health.kr/drug/A11AKP08F0397",
+      "maker": null
+    },
+    "checkedAt": "2026-11-21",
+    "notes": ""
+  },
+  {
+    "id": "panpyrin-night-liq",
+    "series": "panpyrin",
+    "name": "판피린나이트액",
+    "mfdsCode": "202501643",
+    "kpicId": "2025070300001",
+    "form": "액제 (경구 내용액제)",
+    "pack": "20mL/병, 20mL/병 × 5",
+    "unit": "병",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 1회 1병, 1일 3회 식후 30분 (필요 시 취침 시, 복용 간격 4시간)",
+    "ingredients": {
+      "apap": 370,
+      "dph": 25,
+      "pse": 30,
+      "mep": 25,
+      "dxm": 16,
+      "gua": 83
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501643",
+      "kpic": "https://health.kr/drug/2025070300001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-21",
+    "notes": ""
+  },
+  {
+    "id": "coldprofen-soft",
+    "series": "coldprofen",
+    "name": "콜드프로펜연질캡슐",
+    "mfdsCode": "202502969",
+    "kpicId": "2025111800004",
+    "form": "연질캡슐",
+    "pack": "12캡슐/상자 (12캡슐/PTP × 1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지",
+    "dosageText": "만 15세 이상 1회 2캡슐, 1일 3회 식후 30분",
+    "ingredients": {
+      "ibu": 75,
+      "gua": 27.78,
+      "pse": 15,
+      "dxm": 5.34,
+      "cpm": 1.25,
+      "mep": 12.5,
+      "brh": 2
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502969",
+      "kpic": "https://health.kr/drug/2025111800004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-21",
+    "notes": ""
+  },
+  {
+    "id": "coldprofen-cough",
+    "series": "coldprofen",
+    "name": "콜드프로펜코프연질캡슐",
+    "mfdsCode": "202502970",
+    "kpicId": "2025111800005",
+    "form": "연질캡슐",
+    "pack": "12캡슐/상자 (12캡슐/PTP × 1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지",
+    "dosageText": "만 15세 이상 1회 2캡슐, 1일 3회 식후 30분",
+    "ingredients": {
+      "ibu": 75,
+      "gua": 41.66,
+      "dxm": 8,
+      "mep": 12.5,
+      "brh": 2
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502970",
+      "kpic": "https://health.kr/drug/2025111800005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-21",
+    "notes": ""
+  },
+  {
+    "id": "coldprofen-nose",
+    "series": "coldprofen",
+    "name": "콜드프로펜노즈연질캡슐",
+    "mfdsCode": "202502952",
+    "kpicId": "2025111700004",
+    "form": "연질캡슐",
+    "pack": "12캡슐/상자 (12캡슐/PTP × 1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지",
+    "dosageText": "만 15세 이상 1회 2캡슐, 1일 3회 식후 30분",
+    "ingredients": {
+      "ibu": 75,
+      "pse": 15,
+      "cpm": 1.25
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502952",
+      "kpic": "https://health.kr/drug/2025111700004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-21",
+    "notes": ""
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "major": [
+    { "id": "A", "name": "진통제", "en": "Analgesic" },
+    { "id": "B", "name": "항히스타민제/비충혈제거제", "en": "Antihistamine · Nasal decongestant" },
+    { "id": "D", "name": "진해거담제", "en": "Antitussive · Expectorant" },
+    { "id": "E", "name": "기타", "en": "Others" }
+  ],
+  "minor": [
+    { "id": "ap", "major": "A", "name": "해열진통제", "en": "Antipyretic analgesic", "color": "#c92a2a" },
+    { "id": "ns", "major": "A", "name": "비스테로이드성 소염진통제 (NSAIDs)", "en": "NSAIDs", "color": "#ff6b6b" },
+    { "id": "ah", "major": "B", "name": "항히스타민제 (1세대)", "en": "1st-gen antihistamine", "color": "#e8a400" },
+    { "id": "dc", "major": "B", "name": "비충혈제거제", "en": "Nasal decongestant", "color": "#ffd43b" },
+    { "id": "cg", "major": "D", "name": "진해제", "en": "Antitussive", "color": "#1864ab" },
+    { "id": "ex", "major": "D", "name": "거담제", "en": "Expectorant", "color": "#4dabf7" },
+    { "id": "cf", "major": "E", "name": "기타", "en": "Others", "color": "#7048e8" }
+  ]
+}
