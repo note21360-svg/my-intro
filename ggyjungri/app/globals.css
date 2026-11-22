@@ -95,6 +95,21 @@ h2 { font-size: 18px; margin: 28px 0 6px; }
 .src li { margin-bottom: 4px; break-inside: avoid; }
 a { color: inherit; }
 [hidden] { display: none !important; }
+/* 정렬 바: 시리즈별 / 성분 함량순 */
+.sortbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
+.seg2 { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg2 button { font: inherit; font-size: 14px; min-height: 44px; padding: 0 14px; border: 0; background: var(--bg); color: var(--ink); cursor: pointer; }
+.seg2 button + button { border-left: 1px solid var(--line); }
+.seg2 button[aria-pressed=true] { background: var(--acc); color: var(--bg); font-weight: 700; }
+.sortbar select { font: inherit; font-size: 16px; min-height: 44px; padding: 0 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); flex: 1 1 180px; max-width: 100%; }
+.sortnote { margin: -2px 0 10px; }
+.sh { grid-column: 1 / -1; margin: 10px 0 -2px; font-size: 17px; }
+.sh:first-child { margin-top: 0; }
+.hl { display: flex; align-items: baseline; gap: 8px; margin: -4px 0 8px; padding: 6px 10px; border-radius: 8px; background: var(--soft); font-weight: 500; }
+.hl .rk { display: inline-grid; place-items: center; min-width: 24px; height: 24px; border-radius: 12px; background: var(--acc); color: var(--bg); font-size: 13px; font-weight: 700; align-self: center; }
+.hl b { margin-left: auto; font-size: 18px; font-variant-numeric: tabular-nums; }
+.hl small { font-size: 12px; font-weight: 400; color: var(--mut); }
+.ib.on { background: color-mix(in srgb, var(--acc) 10%, transparent); border-radius: 6px; margin-inline: -6px; padding-inline: 6px; }
 @media (max-width: 600px) {
   /* 휴대폰: 줄 간격과 글자 크기를 조금씩 줄여 한 화면에 더 많이 보이게 (터치 영역 44px은 유지) */
   body { font-size: 14px; line-height: 1.35; }
@@ -131,6 +146,11 @@ a { color: inherit; }
   .float { gap: 8px; padding-left: 14px; font-size: 13px; }
   .sel { gap: 5px; margin-bottom: 10px; }
   .sel button { font-size: 12px; padding: 0 10px; }
+  .sortbar { gap: 6px; margin-bottom: 8px; }
+  .seg2 button { font-size: 13px; padding: 0 12px; }
+  .sh { font-size: 15px; margin-top: 8px; }
+  .hl { padding: 5px 8px; margin-bottom: 6px; font-size: 13px; }
+  .hl b { font-size: 16px; }
   table.ct { font-size: 12px; }
   .ct thead th { font-size: 13px; }
   /* 시리즈 칩이 많아 휴대폰에서는 한 줄 가로 스크롤 */

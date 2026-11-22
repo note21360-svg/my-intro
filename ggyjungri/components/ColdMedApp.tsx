@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import type { Classes, Ingredient, Major, Minor, Product, Series } from "@/lib/types";
 
 type Props = { classes: Classes; ingredients: Ingredient[]; series: Series[]; products: Product[] };
@@ -17,6 +17,10 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
   const [pick, setPick] = useState<string[]>([]);
   const [tab, setTab] = useState<"prod" | "cmp">("prod");
   const [open, setOpen] = useState<Set<string>>(() => new Set());
+  // 정렬: 시리즈별 / 성분 함량순 (선택한 성분이 든 품목만, 함량 많은순·적은순)
+  const [sortMode, setSortMode] = useState<"series" | "ing">("series");
+  const [ingSel, setIngSel] = useState("");
+  const [desc, setDesc] = useState(true);
 
   // 저장된 비교 선택 불러오기 (실패해도 앱은 정상 동작)
   useEffect(() => {
@@ -43,7 +47,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
 
   const amt = (p: Product, id: string) => {
     const v = p.ingredients[id] || 0;
-    return daily ? v * p.perDoseMax * p.timesPerDayMax : v;
+    return daily ? v * p.perDoseMax * p.timesPerDayMax : v * p.perDoseMax;
   };
 
   // 막대 최대길이 = 전체 품목 중 해당 성분 최고값 (시리즈 필터와 무관)
@@ -51,7 +55,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
     const t = new Map<string, number>();
     for (const p of products)
       for (const [id, v] of Object.entries(p.ingredients)) {
-        const a = daily ? v * p.perDoseMax * p.timesPerDayMax : v;
+        const a = daily ? v * p.perDoseMax * p.timesPerDayMax : v * p.perDoseMax;
         t.set(id, Math.max(t.get(id) || 0, a));
       }
     return t;
@@ -123,6 +127,22 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
   };
 
   const visible = ordered.filter((p) => on.has(p.series));
+  const ingMode = sortMode === "ing" && !!ingSel;
+  const listed = ingMode
+    ? visible
+        .filter((p) => p.ingredients[ingSel])
+        .sort((a, b) => (desc ? -1 : 1) * (amt(a, ingSel) - amt(b, ingSel)) || a.name.localeCompare(b.name, "ko"))
+    : visible;
+  // 성분 선택 목록: 소분류별로 묶고, 지금 보이는 시리즈 중 그 성분이 든 품목 수 표시
+  const ingGroups = classes.minor
+    .map((c) => ({
+      c,
+      items: ingredients
+        .filter((g) => g.class === c.id)
+        .map((g) => ({ g, n: visible.filter((p) => p.ingredients[g.id]).length }))
+        .filter((x) => x.n > 0),
+    }))
+    .filter((x) => x.items.length);
   const picked = pick.map((id) => products.find((p) => p.id === id)).filter((p): p is Product => !!p);
 
   return (
@@ -162,6 +182,37 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
       <main className="wrap">
         {tab === "prod" ? (
           <section>
+            <div className="sortbar">
+              <div className="seg2" role="group" aria-label="정렬 기준">
+                <button aria-pressed={sortMode === "series"} onClick={() => setSortMode("series")}>시리즈별</button>
+                <button aria-pressed={sortMode === "ing"} onClick={() => setSortMode("ing")}>성분 함량순</button>
+              </div>
+              {sortMode === "ing" && (
+                <>
+                  <select value={ingSel} onChange={(e) => setIngSel(e.target.value)} aria-label="정렬할 성분 선택">
+                    <option value="">성분 선택</option>
+                    {ingGroups.map(({ c, items }) => (
+                      <optgroup key={c.id} label={c.name}>
+                        {items.map(({ g, n }) => (
+                          <option key={g.id} value={g.id}>{g.ko} ({n})</option>
+                        ))}
+                      </optgroup>
+                    ))}
+                  </select>
+                  <div className="seg2" role="group" aria-label="정렬 방향">
+                    <button aria-pressed={desc} onClick={() => setDesc(true)}>많은순</button>
+                    <button aria-pressed={!desc} onClick={() => setDesc(false)}>적은순</button>
+                  </div>
+                </>
+              )}
+            </div>
+            {sortMode === "ing" && (
+              <p className="note sortnote">
+                {ingMode
+                  ? `${ingById.get(ingSel)?.ko} 함유 ${listed.length}개 · ${daily ? "1일 최대" : "1회"} 기준 ${desc ? "많은" : "적은"}순`
+                  : "정렬할 성분을 고르세요. 그 성분이 든 품목만 함량순으로 보여 줍니다."}
+              </p>
+            )}
             <div className="legend">
               {classes.major.map((m) => {
                 const cs = classes.minor.filter((c) => c.major === m.id);
@@ -185,12 +236,27 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
             </div>
             <div className="cards">
               {visible.length === 0 && <div className="empty">선택된 시리즈가 없습니다.</div>}
-              {visible.map((p) => {
+              {listed.map((p, idx) => {
                 const s = seriesById.get(p.series);
+                const newSeries = !ingMode && (idx === 0 || listed[idx - 1].series !== p.series);
+                const nInSeries = listed.filter((x) => x.series === p.series).length;
                 const isOn = pick.includes(p.id);
                 const full = !isOn && pick.length >= MAX_PICK;
                 return (
-                  <article className="card" key={p.id}>
+                  <Fragment key={p.id}>
+                  {newSeries && (
+                    <h2 className="sh">
+                      {s?.name} <span className="meta">{s?.maker} · {nInSeries}개</span>
+                    </h2>
+                  )}
+                  <article className="card">
+                    {ingMode && (
+                      <div className="hl">
+                        <span className="rk">{idx + 1}</span>
+                        {ingById.get(ingSel)?.ko}
+                        <b>{fmt(amt(p, ingSel))}<small> mg</small></b>
+                      </div>
+                    )}
                     <div className="ch">
                       <div>
                         <h3>{p.name}</h3>
@@ -253,7 +319,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                                 </div>
                               )}
                               {rows.map((g) => (
-                                <div className="ib" key={g.id}>
+                                <div className={`ib${ingMode && g.id === ingSel ? " on" : ""}`} key={g.id}>
                                   <div className="ibh">
                                     <span>{g.ko}</span>
                                     <b>{fmt(amt(p, g.id))}<small> mg</small></b>
@@ -271,6 +337,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                       <div className="note" style={{ marginTop: 6 }} key={n}>DUR {n}</div>
                     ))}
                   </article>
+                  </Fragment>
                 );
               })}
             </div>
