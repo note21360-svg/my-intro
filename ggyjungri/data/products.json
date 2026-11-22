@@ -56,11 +56,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201003989",
       "kpic": "https://health.kr/drug/2010061500008",
-      "maker": null
+      "maker": "https://www.dong-wha.co.kr/product/content.asp?t_idx=373&b=20&s=21"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "동화약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "powercold-cough",
@@ -87,11 +87,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201801178",
       "kpic": "https://health.kr/drug/2018031600004",
-      "maker": null
+      "maker": "https://www.dong-wha.co.kr/product/content.asp?t_idx=373&b=20&s=21"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "동화약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "powercold-nose",
@@ -118,11 +118,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201801538",
       "kpic": "https://health.kr/drug/2018041000003",
-      "maker": null
+      "maker": "https://www.dong-wha.co.kr/product/content.asp?t_idx=373&b=20&s=21"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "동화약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "powercold-cap",
@@ -153,11 +153,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201900977",
       "kpic": "https://health.kr/drug/2019022200070",
-      "maker": null
+      "maker": "https://www.dong-wha.co.kr/product/content.asp?t_idx=373&b=20&s=21"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "정우신약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "powercold-nose-q",
@@ -183,11 +183,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202500153",
       "kpic": "https://health.kr/drug/2025012100006",
-      "maker": null
+      "maker": "https://www.dong-wha.co.kr/product/content.asp?t_idx=373&b=20&s=21"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "동화약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지에 허가변경 공지만 있고 성분 표기는 없음 (2026-11-22)."
   },
   {
     "id": "panpyrin-q-liq",
@@ -288,7 +288,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 1회 정수가 없는 병 시럽(100mL)이라 함량을 1mL 기준으로 저장. DL-메틸에페드린염산염은 식약처 46.88mg/100mL, 약학정보원 46.875mg/100mL(반올림 차이) → 식약처 값 사용."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 1회 정수가 없는 병 시럽(100mL)이라 함량을 1mL 기준으로 저장. DL-메틸에페드린염산염은 식약처 46.88mg/100mL, 약학정보원 46.875mg/100mL(반올림 차이) → 식약처 값 사용. 종근당 홈페이지 제품 목록에서 찾지 못함 (2026-11-22)."
   },
   {
     "id": "modco-s",
@@ -318,7 +318,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 종근당 가정상비약 목록에 '모드코S연질캡슐'로 있으나 상세 페이지는 열지 못함 (2026-11-22)."
   },
   {
     "id": "modcol-s",
@@ -349,11 +349,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201204330",
       "kpic": "https://health.kr/drug/2012050900002",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000255"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치(홈페이지 제품명 '모드콜S연질캡슐') (2026-11-22)."
   },
   {
     "id": "modcough-s",
@@ -386,7 +386,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 종근당 가정상비약 목록에 '모드코프S연질캡슐'로 있으나 상세 페이지는 열지 못함 (2026-11-22)."
   },
   {
     "id": "modcol-nose-syrup",
@@ -415,7 +415,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 성인 용량은 '12세-성인(44kg 이상) 1회 20mL, 24시간 동안 4회 이내'."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 성인 용량은 '12세-성인(44kg 이상) 1회 20mL, 24시간 동안 4회 이내'. 종근당 홈페이지 제품 목록에서 찾지 못함 (2026-11-22)."
   },
   {
     "id": "modcol-cough-syrup",
@@ -444,11 +444,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202203444",
       "kpic": "https://health.kr/drug/2022090100005",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000702"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 5-6회' → 최대 6회로 계산."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 5-6회' → 최대 6회로 계산. 제약사 홈페이지 성분·함량 일치(100mL 기준 표기) (2026-11-22)."
   },
   {
     "id": "modcol-cold-syrup",
@@ -477,11 +477,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202203513",
       "kpic": "https://health.kr/drug/2022090800004",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000701"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·15mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 3회 식후 및 필요한 경우 취침 시' → 3회로 계산."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·15mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 3회 식후 및 필요한 경우 취침 시' → 3회로 계산. 제약사 홈페이지 성분·함량 일치(100mL 기준 표기). 종근당 홈페이지는 '모드콜콜드시럽(소아용)'으로 소개 (2026-11-22)."
   },
   {
     "id": "modcol-ibu-nose",
@@ -507,11 +507,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601089",
       "kpic": "https://health.kr/drug/2026041600003",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000963"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "modcol-cough-strong",
@@ -541,11 +541,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601190",
       "kpic": "https://health.kr/drug/2026042400005",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000961"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "modcol-ibu-cold",
@@ -577,11 +577,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601208",
       "kpic": "https://health.kr/drug/2026042700003",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000965"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치(홈페이지 dl-메틸에페드린 '12.5m' 단위 오타) (2026-11-22)."
   },
   {
     "id": "modcol-ibu-cough",
@@ -611,11 +611,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601272",
       "kpic": "https://health.kr/drug/2026043000001",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000964"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "modcol-t-night",
@@ -648,7 +648,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 종근당 홈페이지 제품 목록에서 찾지 못함 (2026-11-22)."
   },
   {
     "id": "modcol-cold-strong",
@@ -680,11 +680,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601383",
       "kpic": "https://health.kr/drug/2026051300010",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000962"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "modcol-nose-strong",
@@ -710,11 +710,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601384",
       "kpic": "https://health.kr/drug/2026051300011",
-      "maker": null
+      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000960"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "coldprofen-soft",
@@ -847,7 +847,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "신일제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 신일제약 홈페이지 접속 실패로 미확인 (2026-11-22)."
   },
   {
     "id": "ibucatch-cough",
@@ -881,7 +881,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "신일제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 신일제약 홈페이지 접속 실패로 미확인 (2026-11-22)."
   },
   {
     "id": "maxibufen-nose",
@@ -908,11 +908,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501849",
       "kpic": "https://health.kr/drug/2025072300006",
-      "maker": null
+      "maker": "https://www.hanmi.co.kr/business/product/finder/detail-7686.hm?prodSeq=7686"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "한미약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "maxibufen-cold",
@@ -943,11 +943,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502043",
       "kpic": "https://health.kr/drug/2025080700001",
-      "maker": null
+      "maker": "https://www.hanmi.co.kr/business/product/finder/detail-7664.hm?prodSeq=7664"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "한미약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "maxibufen-cough",
@@ -977,11 +977,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502046",
       "kpic": "https://health.kr/drug/2025080700004",
-      "maker": null
+      "maker": "https://www.hanmi.co.kr/business/product/finder/detail-7685.hm?prodSeq=7685"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "한미약품",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치(홈페이지 '아이페네신' 오타, 함량 41.66mg 동일) (2026-11-22)."
   },
   {
     "id": "exxencol",
@@ -1016,7 +1016,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 보령컨슈머헬스 판매 근거와 홈페이지를 찾지 못함(허가: 알피바이오) (2026-11-22)."
   },
   {
     "id": "carolb-cough",
@@ -1048,7 +1048,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 일동제약 홈페이지에는 '플러스' 3종만 있음 (2026-11-22)."
   },
   {
     "id": "carolb-nose",
@@ -1079,7 +1079,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 일동제약 홈페이지에는 '플러스' 3종만 있음 (2026-11-22)."
   },
   {
     "id": "carolb-cold",
@@ -1115,7 +1115,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 일동제약 홈페이지에는 '플러스' 3종만 있음 (2026-11-22)."
   },
   {
     "id": "carolb-cough-plus",
@@ -1145,11 +1145,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202503119",
       "kpic": "https://health.kr/drug/2025120100004",
-      "maker": null
+      "maker": "https://www.ildong.com/kor/product/view.id?prdSeq=3027"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "carolb-cold-plus",
@@ -1181,11 +1181,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202600695",
       "kpic": "https://health.kr/drug/2026031000002",
-      "maker": null
+      "maker": "https://www.ildong.com/kor/product/view.id?prdSeq=3025"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "carolb-nose-plus",
@@ -1212,11 +1212,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202600754",
       "kpic": "https://health.kr/drug/2026031600001",
-      "maker": null
+      "maker": "https://www.ildong.com/kor/product/view.id?prdSeq=3028"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "알피바이오",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제약사 홈페이지 성분·함량 일치 (2026-11-22)."
   },
   {
     "id": "pensak-co",
@@ -1246,11 +1246,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201604641",
       "kpic": "https://health.kr/drug/2016080100057",
-      "maker": null
+      "maker": "https://www.jeilpharm.co.kr/jeilpharm/product_view.asp?idx=479"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "코스맥스파마",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제일헬스사이언스 제품 페이지 있음(성분 표기는 텍스트로 확인 못 함) (2026-11-22)."
   },
   {
     "id": "pensak-cough",
@@ -1280,11 +1280,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201604711",
       "kpic": "https://health.kr/drug/2016080100028",
-      "maker": null
+      "maker": "https://www.jeilpharm.co.kr/jeilpharm/product_view.asp?idx=480"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "코스맥스파마",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제일헬스사이언스 제품 페이지 있음(성분 표기는 텍스트로 확인 못 함) (2026-11-22)."
   },
   {
     "id": "pensak-col",
@@ -1315,11 +1315,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201604720",
       "kpic": "https://health.kr/drug/2016080200004",
-      "maker": null
+      "maker": "https://www.jeilpharm.co.kr/jeilpharm/product_view.asp?idx=478"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "코스맥스파마",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 제일헬스사이언스 제품 페이지 있음(성분 표기는 텍스트로 확인 못 함) (2026-11-22)."
   },
   {
     "id": "pensak-fresh",
@@ -1348,7 +1348,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "제일헬스사이언스",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 거담 성분만 들어 있는 제품(종합감기약 아님)."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 거담 성분만 들어 있는 제품(종합감기약 아님). 제일헬스사이언스 출시 보도자료만 확인(제품 페이지 못 찾음) (2026-11-22)."
   },
   {
     "id": "coldaewon-cold",
@@ -1381,7 +1381,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 식약처 허가 포장단위가 수출용만 기재됨(국내 유통 여부 확인 필요)."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 식약처 허가 포장단위가 수출용만 기재됨(국내 유통 여부 확인 필요). 대원제약 홈페이지 일반의약품 목록에 없음 (2026-11-22)."
   },
   {
     "id": "coldaewon-cold-s",
@@ -1414,7 +1414,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 일반의약품 목록에 없음 (2026-11-22)."
   },
   {
     "id": "coldaewon-nose-s",
@@ -1445,7 +1445,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 일반의약품 목록에 없음 (2026-11-22)."
   },
   {
     "id": "coldaewon-cough-s",
@@ -1478,7 +1478,7 @@
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 일반의약품 목록에 없음 (2026-11-22)."
   },
   {
     "id": "coldaewon-cough-q",
@@ -1508,11 +1508,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202104595",
       "kpic": "https://health.kr/drug/2021061700005",
-      "maker": null
+      "maker": "https://www.daewonpharm.com/products/sub02_01_view.jsp?mb=02&mm=22&ms=211&lang=1&PRD_NO=1388"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 성분명 일치(함량 미표기) (2026-11-22)."
   },
   {
     "id": "coldaewon-cold-q",
@@ -1543,11 +1543,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202105006",
       "kpic": "https://health.kr/drug/2021070200002",
-      "maker": null
+      "maker": "https://www.daewonpharm.com/products/sub02_01_view.jsp?mb=02&mm=22&ms=211&lang=1&PRD_NO=1389"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 성분명 일치(함량 미표기) (2026-11-22)."
   },
   {
     "id": "coldaewon-night",
@@ -1576,11 +1576,11 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202302835",
       "kpic": "https://health.kr/drug/2023100400003",
-      "maker": null
+      "maker": "https://www.daewonpharm.com/products/sub02_01_view.jsp?mb=02&mm=22&ms=211&lang=1&PRD_NO=1501"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 성분명 일치(함량 미표기) (2026-11-22)."
   },
   {
     "id": "coldaewon-nose-q-s",
@@ -1608,10 +1608,10 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202302925",
       "kpic": "https://health.kr/drug/2023101900005",
-      "maker": null
+      "maker": "https://www.daewonpharm.com/products/sub02_01_view.jsp?mb=02&mm=22&ms=211&lang=1&PRD_NO=1387"
     },
     "checkedAt": "2026-11-22",
     "permitHolder": "대원제약",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 대원제약 홈페이지 성분명 일치(함량 미표기) (2026-11-22)."
   }
 ]

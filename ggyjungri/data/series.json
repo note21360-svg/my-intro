@@ -9,7 +9,7 @@
     "id": "powercold",
     "name": "파워콜",
     "maker": "동화약품",
-    "homepage": null
+    "homepage": "https://www.dong-wha.co.kr"
   },
   {
     "id": "panpyrin",
@@ -21,7 +21,7 @@
     "id": "modcol",
     "name": "모드콜",
     "maker": "종근당",
-    "homepage": null
+    "homepage": "https://www.ckdpharm.com"
   },
   {
     "id": "coldprofen",
@@ -32,14 +32,14 @@
   {
     "id": "ibucatch",
     "name": "이부캐치",
-    "maker": "동국제약",
-    "homepage": null
+    "maker": "신일제약",
+    "homepage": "https://www.sinilpharm.com"
   },
   {
     "id": "maxibufen",
     "name": "맥시부펜",
     "maker": "한미약품",
-    "homepage": null
+    "homepage": "https://www.hanmi.co.kr"
   },
   {
     "id": "exxencol",
@@ -51,18 +51,18 @@
     "id": "carolb",
     "name": "캐롤비",
     "maker": "일동제약",
-    "homepage": null
+    "homepage": "https://www.ildong.com"
   },
   {
     "id": "pensak",
     "name": "펜싹",
     "maker": "제일헬스사이언스",
-    "homepage": null
+    "homepage": "https://www.jeilpharm.co.kr"
   },
   {
     "id": "coldaewon",
     "name": "콜대원",
     "maker": "대원제약",
-    "homepage": null
+    "homepage": "https://www.daewonpharm.com"
   }
 ]
