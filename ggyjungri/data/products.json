@@ -354,39 +354,6 @@
     "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 종근당 가정상비약 목록에 '모드코프S연질캡슐'로 있으나 상세 페이지는 열지 못함 (2026-11-22)."
   },
   {
-    "id": "modcol-cough-syrup",
-    "series": "modcol",
-    "name": "모드콜코프시럽",
-    "mfdsCode": "202203444",
-    "kpicId": "2022090100005",
-    "form": "시럽제 (경구 내용액제)",
-    "pack": "20밀리리터/포[x5포/box],5밀리리터/포[x10포/box]",
-    "unit": "mL",
-    "perDoseMax": 20,
-    "timesPerDayMax": 6,
-    "age": "만 15세 이상 20mL · 만 11~15세 13.3mL · 만 8~11세 10mL · 만 5~8세 6.7mL · 만 3~5세 5mL · 만 2~3세 4mL · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
-    "dosageText": "1일 5-6회, 약 4시간 간격을 두고 복용한다. 만 15세 이상 : 1회 20ml 만 11세 이상 - 만 15세 미만 : 1회 13.3ml 만 8세 이상 - 만 11세 미만 : 1회 10ml 만 5세이상 - 만 8세 미만 : 1회 6.7ml 만 3세 이상 - 만 5세 미만 : 1회 5ml 만 2세 이상 - 만 3세 미만 : 1회 4ml - 만2세 미만의 영·유아를 대상으로 하는 용법은 인정하지 아니한다. 다만, 꼭 필요할 경우 의사의 진료를 받는다.",
-    "ingredients": {
-      "cpm": 0.1,
-      "mep": 0.625,
-      "dxm": 0.5,
-      "gua": 2.5
-    },
-    "durNotes": [
-      "병용금기: 라사길린·사피나미드·셀레길린"
-    ],
-    "price": null,
-    "verified": true,
-    "sources": {
-      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202203444",
-      "kpic": "https://health.kr/drug/2022090100005",
-      "maker": "https://www.ckdpharm.com/product/productView.do?prodCode=CKD0000702"
-    },
-    "checkedAt": "2026-11-22",
-    "permitHolder": "종근당",
-    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 5-6회' → 최대 6회로 계산. 제약사 홈페이지 성분·함량 일치(100mL 기준 표기) (2026-11-22)."
-  },
-  {
     "id": "modcol-ibu-nose",
     "series": "modcol",
     "name": "모드콜이부노즈연질캡슐",
