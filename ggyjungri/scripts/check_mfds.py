@@ -3,9 +3,8 @@
 
 준비
   1. 공공데이터포털(data.go.kr)에서 「식품의약품안전처_의약품 제품 허가정보」 활용신청
-  2. ggyjungri 폴더의 .env.example 을 복사해 .env 파일을 만들고,
-     마이페이지의 '일반 인증키(Decoding)' 를 적기
-       MFDS_API_KEY=발급받은키
+  2. 아래 '실행'을 하면 키를 물어봅니다. 마이페이지의 '일반 인증키(Decoding)' 를
+     붙여 넣고 Enter → ggyjungri/.env 파일에 자동 저장되어 다음부터는 묻지 않습니다.
      (.env 는 .gitignore 에 들어 있어 깃허브에 올라가지 않습니다.
       키를 이 코드 파일에 직접 적지 마세요.)
 
@@ -19,6 +18,7 @@
   - 파일은 고치지 않습니다. 결과를 보고 사람이 판단해서 고칩니다.
 """
 
+import getpass
 import json
 import os
 import re
@@ -109,12 +109,33 @@ def load_env_file(path):
         os.environ.setdefault(name.strip(), value.strip().strip('"').strip("'"))
 
 
-def main():
-    load_env_file(DATA.parent / ".env")
-    key = os.environ.get("MFDS_API_KEY")
-    if not key or key == "여기에_발급받은_키":
-        print("MFDS_API_KEY 가 없습니다. ggyjungri/.env 파일을 만들었는지 확인하세요. (파일 맨 위 '준비' 참고)")
+PLACEHOLDER = "여기에_발급받은_키"
+
+
+def ask_and_save_key(env_path):
+    """키를 붙여 넣게 하고 .env 파일에 MFDS_API_KEY=키 로 저장합니다.
+    입력한 글자는 화면에 보이지 않습니다(붙여 넣은 뒤 그냥 Enter)."""
+    print("공공데이터포털 '일반 인증키(Decoding)' 를 붙여 넣고 Enter 를 누르세요.")
+    print("(보안을 위해 붙여 넣은 글자는 화면에 표시되지 않습니다)")
+    key = getpass.getpass("인증키: ").strip().strip('"').strip("'")
+    if not key:
+        print("입력된 키가 없습니다. 다시 실행해 주세요.")
         sys.exit(2)
+    # 기존 .env 에서 MFDS_API_KEY 줄만 바꾸고 나머지 줄은 그대로 둡니다.
+    lines = env_path.read_text(encoding="utf-8").splitlines() if env_path.exists() else []
+    lines = [l for l in lines if not l.strip().startswith("MFDS_API_KEY=")]
+    lines.append(f"MFDS_API_KEY={key}")
+    env_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"저장했습니다: {env_path}  (키 길이 {len(key)}자)\n")
+    return key
+
+
+def main():
+    env_path = DATA.parent / ".env"
+    load_env_file(env_path)
+    key = os.environ.get("MFDS_API_KEY")
+    if not key or key == PLACEHOLDER:
+        key = ask_and_save_key(env_path)
 
     products = json.load(open(DATA / "products.json", encoding="utf-8"))
     ingredients = {g["id"]: g for g in json.load(open(DATA / "ingredients.json", encoding="utf-8"))}

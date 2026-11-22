@@ -22,13 +22,10 @@ Vercel에서 새 프로젝트를 만들고 **Root Directory를 `ggyjungri`** 로
 
 ## 식약처 허가정보 API로 데이터 대조
 1. 공공데이터포털(data.go.kr)에서 **「식품의약품안전처_의약품 제품 허가정보」** 활용신청 → 마이페이지에서 **일반 인증키(Decoding)** 복사
-2. `.env.example`을 복사해 `.env` 파일을 만들고 키 적기
-   ```
-   MFDS_API_KEY=발급받은키
-   ```
-   `.env`는 `.gitignore`에 들어 있어 깃허브에 올라가지 않습니다.
-3. 실행
+2. 실행 (윈도우는 `python3` 대신 `python`)
    ```bash
    python3 scripts/check_mfds.py
    ```
+   처음 실행하면 `인증키:`를 묻습니다. 복사한 키를 **붙여 넣고 Enter**를 누르세요. 화면에는 표시되지 않습니다.
+   키는 `ggyjungri/.env`에 자동 저장되고, 다음부터는 묻지 않습니다. `.env`는 `.gitignore`에 들어 있어 깃허브에 올라가지 않습니다.
    품목마다 원료약품 및 분량을 `products.json`과 비교해 일치/불일치, 취소·취하 여부, 포장단위를 출력합니다. 파일은 고치지 않습니다.
