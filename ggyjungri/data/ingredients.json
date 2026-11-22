@@ -25,11 +25,12 @@
   },
   {
     "id": "dph",
-    "class": "ah",
+    "class": "cf",
     "ko": "디펜히드라민염산염",
     "en": "Diphenhydramine HCl",
     "sedating": true,
-    "pregnancyDUR2": false
+    "pregnancyDUR2": false,
+    "notes": "1세대 항히스타민제이나 사용자 결정에 따라 '기타'로 분류(2026-11-22). 졸음 주의 판정은 유지."
   },
   {
     "id": "tpl",
