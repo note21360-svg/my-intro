@@ -46,29 +46,27 @@ def norm(name):
 
 def call_api(key, item_seq):
     """품목기준코드 하나로 API를 불러 item(딕셔너리)을 돌려줍니다. 실패하면 오류 문장을 돌려줍니다."""
-    last_error = ""
+    errors = []
     for url in ENDPOINTS:
-        query = urllib.parse.urlencode({"serviceKey": key, "item_seq": item_seq, "type": "json", "numOfRows": 10, "pageNo": 1})
-        try:
-            with urllib.request.urlopen(f"{url}?{query}", timeout=30) as res:
-                raw = res.read().decode("utf-8")
-        except Exception as e:  # 404(없는 버전), 네트워크 오류 등
-            last_error = f"{url.split('/')[-2]}: {e}"
-            continue
-        try:
-            body = json.loads(raw)["body"]
-        except (ValueError, KeyError):
-            last_error = f"{url.split('/')[-2]}: JSON 이 아닌 응답 → {raw[:200]}"
-            continue
-        items = body.get("items") or []
-        if isinstance(items, dict):  # 응답 모양이 {"item": [...]} 인 경우
-            items = items.get("item") or []
-        if isinstance(items, dict):
-            items = [items]
-        if not items:
-            return None, f"{url.split('/')[-2]}: 결과 0건"
-        return items[0], url.split("/")[-2]
-    return None, last_error
+        version = url.split("/")[-2]
+        for attempt in (1, 2):  # 일시적인 오류가 있어 같은 주소로 한 번 더 시도
+            query = urllib.parse.urlencode({"serviceKey": key, "item_seq": item_seq, "type": "json", "numOfRows": 10, "pageNo": 1})
+            try:
+                with urllib.request.urlopen(f"{url}?{query}", timeout=30) as res:
+                    raw = res.read().decode("utf-8")
+                body = json.loads(raw)["body"]
+            except Exception as e:  # 404(없는 버전), 네트워크 오류, JSON 아닌 응답 등
+                errors.append(f"{version}({attempt}회): {e}")
+                continue
+            items = body.get("items") or []
+            if isinstance(items, dict):  # 응답 모양이 {"item": [...]} 인 경우
+                items = items.get("item") or []
+            if isinstance(items, dict):
+                items = [items]
+            if not items:
+                return None, f"{version}: 결과 0건 (품목기준코드 확인 필요)"
+            return items[0], version
+    return None, " / ".join(errors)
 
 
 def parse_materials(text):
@@ -92,7 +90,9 @@ def parse_materials(text):
             amount = None
         factor = UNIT_TO_MG.get(fields.get("단위", ""), None)
         mg = amount * factor if (amount is not None and factor) else None
-        result.append((name, mg, fields.get("단위", "")))
+        entry = (name, mg, fields.get("단위", ""))
+        if entry not in result:  # 같은 성분이 두 번 들어 있는 응답이 있어 한 번만
+            result.append(entry)
     return result, basis
 
 
@@ -152,6 +152,7 @@ def main():
         print(f"  API: {info}")
         print(f"  허가 품목명: {item.get('ITEM_NAME')} / 업체: {item.get('ENTP_NAME')} / 허가일: {item.get('ITEM_PERMIT_DATE')}")
         cancel = item.get("CANCEL_NAME") or ""
+        print(f"  허가 상태: {cancel or '(표기 없음)'} {item.get('CANCEL_DATE') or ''}".rstrip())
         if item.get("CANCEL_DATE") or (cancel and cancel != "정상"):
             print(f"  ⚠ 취소/취하: {cancel} {item.get('CANCEL_DATE') or ''}")
             problems += 1
