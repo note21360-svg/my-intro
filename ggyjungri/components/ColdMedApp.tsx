@@ -29,6 +29,33 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
   // 필터: 증상 유형, 진통 성분 기반 (빈 문자열 = 전체)
   const [typeF, setTypeF] = useState<TypeKey | "">("");
   const [baseF, setBaseF] = useState<BaseKey | "">("");
+  const [q, setQ] = useState(""); // 제품명·성분명 검색
+  // 필터 창(바텀시트): 열 때 지금 값을 복사해 두고, [적용]을 눌러야 반영
+  type Draft = { on: Set<string>; typeF: TypeKey | ""; baseF: BaseKey | ""; sortMode: "series" | "ing"; ingSel: string; desc: boolean };
+  const allSeries = () => new Set(series.map((x) => x.id));
+  const defaults = (): Draft => ({ on: allSeries(), typeF: "", baseF: "", sortMode: "series", ingSel: "", desc: true });
+  const [sheet, setSheet] = useState(false);
+  const [draft, setDraft] = useState<Draft>(defaults);
+  const openSheet = () => { setDraft({ on: new Set(on), typeF, baseF, sortMode, ingSel, desc }); setSheet(true); };
+  const applySheet = () => {
+    setOn(draft.on.size ? new Set(draft.on) : allSeries());
+    setTypeF(draft.typeF); setBaseF(draft.baseF); setSortMode(draft.ingSel ? draft.sortMode : "series");
+    setIngSel(draft.ingSel); setDesc(draft.desc); setSheet(false); window.scrollTo(0, 0);
+  };
+  const d = (patch: Partial<Draft>) => setDraft((cur) => ({ ...cur, ...patch }));
+  const toggleDraftSeries = (id: string) =>
+    setDraft((cur) => {
+      const n = new Set(cur.on.size === series.length ? [] : cur.on); // 전체 상태에서 하나 누르면 그 시리즈만
+      if (n.has(id)) n.delete(id); else n.add(id);
+      return { ...cur, on: n.size ? n : allSeries() };
+    });
+  useEffect(() => {
+    if (!sheet) return;
+    const prev = document.body.style.overflow; document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setSheet(false); };
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = prev; window.removeEventListener("keydown", onKey); };
+  }, [sheet]);
 
   // 저장된 비교 선택 불러오기 (실패해도 앱은 정상 동작)
   useEffect(() => {
@@ -118,17 +145,6 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
     });
   };
 
-  const toggleSeries = (id: string) => {
-    setOn((cur) => {
-      const next = new Set(cur);
-      if (next.has(id)) {
-        if (next.size === 1) return cur; // 최소 1개는 켜져 있어야 함
-        next.delete(id);
-      } else next.add(id);
-      return next;
-    });
-  };
-
   const goTab = (t: "prod" | "cmp") => {
     setTab(t);
     window.scrollTo(0, 0);
@@ -139,7 +155,15 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
     const cls = Object.keys(p.ingredients).map((k) => ingById.get(k)?.class);
     return cls.includes("ns") ? "nsaid" : cls.includes("ap") ? "aap" : "none";
   };
-  const visible = ordered.filter((p) => on.has(p.series) && (!typeF || p.type === typeF) && (!baseF || baseOf(p) === baseF));
+  const qn = q.trim().toLowerCase().replace(/\s+/g, "");
+  const matchQ = (p: Product) =>
+    !qn ||
+    p.name.replace(/\s+/g, "").toLowerCase().includes(qn) ||
+    Object.keys(p.ingredients).some((k) => {
+      const g = ingById.get(k);
+      return !!g && (g.ko.toLowerCase().includes(qn) || g.en.toLowerCase().replace(/\s+/g, "").includes(qn));
+    });
+  const visible = ordered.filter((p) => on.has(p.series) && (!typeF || p.type === typeF) && (!baseF || baseOf(p) === baseF) && matchQ(p));
   const ingMode = sortMode === "ing" && !!ingSel;
   const listed = ingMode
     ? visible
@@ -152,7 +176,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
       c,
       items: ingredients
         .filter((g) => g.class === c.id)
-        .map((g) => ({ g, n: visible.filter((p) => p.ingredients[g.id]).length }))
+        .map((g) => ({ g, n: products.filter((p) => p.ingredients[g.id]).length }))
         .filter((x) => x.n > 0),
     }))
     .filter((x) => x.items.length);
@@ -168,13 +192,6 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
               <button aria-pressed={!daily} onClick={() => setDaily(false)}>1회</button>
               <button aria-pressed={daily} onClick={() => setDaily(true)}>1일 최대</button>
             </div>
-          </div>
-          <div className="row chips" style={{ marginTop: 10 }}>
-            {series.map((s) => (
-              <button key={s.id} className="chip" aria-pressed={on.has(s.id)} onClick={() => toggleSeries(s.id)}>
-                {s.name}
-              </button>
-            ))}
           </div>
           <p className="rule">
             {daily
@@ -195,52 +212,77 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
       <main className="wrap">
         {tab === "prod" ? (
           <section>
-            <div className="sortbar">
-              <div className="seg2" role="group" aria-label="증상 유형">
-                <button aria-pressed={typeF === ""} onClick={() => setTypeF("")}>전체</button>
-                {(Object.keys(TYPE_LABEL) as TypeKey[]).map((k) => (
-                  <button key={k} aria-pressed={typeF === k} onClick={() => setTypeF(k)}>{TYPE_LABEL[k]}</button>
-                ))}
-              </div>
-              <div className="seg2" role="group" aria-label="진통 성분">
-                <button aria-pressed={baseF === ""} onClick={() => setBaseF("")}>전체</button>
-                <button aria-pressed={baseF === "aap"} onClick={() => setBaseF("aap")}>AAP</button>
-                <button aria-pressed={baseF === "nsaid"} onClick={() => setBaseF("nsaid")}>NSAIDs</button>
-              </div>
+            <div className="fbar">
+              <span className="fico" aria-hidden="true">☰</span>
+              <span className="fsum">
+                <b>{typeF ? TYPE_LABEL[typeF] : "전체 유형"}</b>
+                {baseF && <> · <b>{baseF === "aap" ? "AAP" : "NSAIDs"}</b></>}
+                {" · "}시리즈: <b>{on.size === series.length ? "전체" : series.filter((x) => on.has(x.id)).map((x) => x.name).slice(0, 2).join("·") + (on.size > 2 ? ` 외 ${on.size - 2}` : "")}</b>
+                {" · "}<b>{ingMode ? `${ingById.get(ingSel)?.ko} ${desc ? "많은" : "적은"}순` : "시리즈별"}</b>
+                {" · "}{listed.length}개
+              </span>
+              <button className="fbtn" onClick={openSheet}>필터</button>
             </div>
-            <div className="sortbar">
-              <div className="seg2" role="group" aria-label="정렬 기준">
-                <button aria-pressed={sortMode === "series"} onClick={() => setSortMode("series")}>시리즈별</button>
-                <button aria-pressed={sortMode === "ing"} onClick={() => setSortMode("ing")}>성분 함량순</button>
-              </div>
-              {sortMode === "ing" && (
-                <>
-                  <select value={ingSel} onChange={(e) => setIngSel(e.target.value)} aria-label="정렬할 성분 선택">
-                    <option value="">성분 선택</option>
-                    {ingGroups.map(({ c, items }) => (
-                      <optgroup key={c.id} label={c.name}>
-                        {items.map(({ g, n }) => (
-                          <option key={g.id} value={g.id}>{g.ko} ({n})</option>
+            <input className="search" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="제품명·성분명 검색" aria-label="제품명·성분명 검색" />
+            {ingMode && <p className="note sortnote">{ingById.get(ingSel)?.ko} 함유 {listed.length}개 · {daily ? "1일 최대" : "1회"} 기준 {desc ? "많은" : "적은"}순</p>}
+            {sheet && (
+              <div className="sheet-bg" onClick={() => setSheet(false)}>
+                <div className="sheet" role="dialog" aria-modal="true" aria-label="필터" onClick={(e) => e.stopPropagation()}>
+                  <div className="grab" aria-hidden="true" />
+                  <div className="sheet-body">
+                    <h4>증상 유형</h4>
+                    <div className="pills">
+                      <button aria-pressed={draft.typeF === ""} onClick={() => d({ typeF: "" })}>전체</button>
+                      {(Object.keys(TYPE_LABEL) as TypeKey[]).map((k) => (
+                        <button key={k} aria-pressed={draft.typeF === k} onClick={() => d({ typeF: k })}>{TYPE_LABEL[k]}</button>
+                      ))}
+                    </div>
+                    <h4>진통 성분</h4>
+                    <div className="pills">
+                      <button aria-pressed={draft.baseF === ""} onClick={() => d({ baseF: "" })}>전체</button>
+                      <button aria-pressed={draft.baseF === "aap"} onClick={() => d({ baseF: "aap" })}>AAP 기반</button>
+                      <button aria-pressed={draft.baseF === "nsaid"} onClick={() => d({ baseF: "nsaid" })}>NSAIDs 기반</button>
+                    </div>
+                    <h4>시리즈</h4>
+                    <div className="pills">
+                      <button aria-pressed={draft.on.size === series.length} onClick={() => d({ on: allSeries() })}>전체</button>
+                      {series.map((x) => (
+                        <button key={x.id} aria-pressed={draft.on.size !== series.length && draft.on.has(x.id)} onClick={() => toggleDraftSeries(x.id)}>{x.name}</button>
+                      ))}
+                    </div>
+                    <h4>정렬</h4>
+                    <div className="pills">
+                      <button aria-pressed={draft.sortMode === "series"} onClick={() => d({ sortMode: "series" })}>시리즈별</button>
+                      <button aria-pressed={draft.sortMode === "ing" && draft.desc} onClick={() => d({ sortMode: "ing", desc: true })}>성분 많은순</button>
+                      <button aria-pressed={draft.sortMode === "ing" && !draft.desc} onClick={() => d({ sortMode: "ing", desc: false })}>성분 적은순</button>
+                    </div>
+                    {draft.sortMode === "ing" && (
+                      <>
+                        <h4>정렬할 성분 <span className="meta">고른 성분이 든 품목만 표시</span></h4>
+                        {ingGroups.map(({ c, items }) => (
+                          <div className="pgrp" key={c.id}>
+                            <div className="pgh"><span className="sw" style={{ background: c.color }} />{c.name}</div>
+                            <div className="pills">
+                              {items.map(({ g, n }) => (
+                                <button key={g.id} aria-pressed={draft.ingSel === g.id} onClick={() => d({ ingSel: g.id })}>{g.ko} <small>{n}</small></button>
+                              ))}
+                            </div>
+                          </div>
                         ))}
-                      </optgroup>
-                    ))}
-                  </select>
-                  <div className="seg2" role="group" aria-label="정렬 방향">
-                    <button aria-pressed={desc} onClick={() => setDesc(true)}>많은순</button>
-                    <button aria-pressed={!desc} onClick={() => setDesc(false)}>적은순</button>
+                      </>
+                    )}
                   </div>
-                </>
-              )}
-            </div>
-            {sortMode === "ing" && (
-              <p className="note sortnote">
-                {ingMode
-                  ? `${ingById.get(ingSel)?.ko} 함유 ${listed.length}개 · ${daily ? "1일 최대" : "1회"} 기준 ${desc ? "많은" : "적은"}순`
-                  : "정렬할 성분을 고르세요. 그 성분이 든 품목만 함량순으로 보여 줍니다."}
-              </p>
+                  <div className="sheet-foot">
+                    <button className="ghost" onClick={() => setDraft(defaults())}>초기화</button>
+                    <button className="primary" onClick={applySheet} disabled={draft.sortMode === "ing" && !draft.ingSel}>
+                      {draft.sortMode === "ing" && !draft.ingSel ? "성분을 고르세요" : "적용"}
+                    </button>
+                  </div>
+                </div>
+              </div>
             )}
             <div className="cards">
-              {visible.length === 0 && <div className="empty">조건에 맞는 품목이 없습니다. 시리즈·유형·진통 성분 선택을 바꿔 보세요.</div>}
+              {visible.length === 0 && <div className="empty">조건에 맞는 품목이 없습니다. 필터나 검색어를 바꿔 보세요.</div>}
               {listed.map((p, idx) => {
                 const s = seriesById.get(p.series);
                 const newSeries = !ingMode && (idx === 0 || listed[idx - 1].series !== p.series);
