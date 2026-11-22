@@ -88,6 +88,9 @@ def main():
         if not urls:
             errors.append(f"품목 {pid}: sources 에 URL 이 하나도 없습니다")
 
+        if p.get("type") not in ("cold", "cough", "nose"):
+            errors.append(f"품목 {pid}: type 은 cold / cough / nose 중 하나여야 합니다 ({p.get('type')})")
+
         if not p.get("checkedAt"):
             errors.append(f"품목 {pid}: 확인 날짜(checkedAt)가 없습니다")
 

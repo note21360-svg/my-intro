@@ -19,6 +19,8 @@ export type Product = {
   id: string;
   series: string;
   name: string;
+  /** 증상 유형 (제품명 기준): cold 종합감기 · cough 목감기 · nose 코감기 */
+  type: "cold" | "cough" | "nose";
   mfdsCode: string;
   kpicId: string | null;
   form: string;

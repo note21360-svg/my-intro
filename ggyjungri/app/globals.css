@@ -56,6 +56,7 @@ main { padding: 20px 0; }
 .specs dt { color: var(--mut); }
 .specs dd { margin: 0; }
 .flag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 10px; border: 1px solid currentColor; margin: 4px 4px 0 0; white-space: nowrap; }
+.tag { display: inline-block; font-size: 12px; padding: 1px 7px; border-radius: 10px; margin: 4px 4px 0 0; background: var(--soft); color: var(--ink); font-weight: 500; white-space: nowrap; }
 .f-w { color: var(--warn); } .f-a { color: var(--sed); } .f-c { color: var(--caf); } .f-q { color: var(--mut); }
 .trk { height: 8px; border-radius: 4px; background: color-mix(in srgb, var(--line) 70%, transparent); overflow: hidden; margin-top: 5px; }
 .trk i { display: block; height: 100%; border-radius: 4px; }
@@ -127,7 +128,7 @@ a { color: inherit; }
   .card { padding: 10px 12px; }
   .card h3 { font-size: 17px; }
   .meta { font-size: 11px; }
-  .flag { font-size: 10.5px; padding: 0 5px; margin-top: 2px; }
+  .flag, .tag { font-size: 10.5px; padding: 0 5px; margin-top: 2px; }
   .acc { margin: 6px 0 2px; }
   .acc summary { font-size: 13px; }
   .specs { font-size: 12px; gap: 2px 8px; padding-bottom: 6px; }
@@ -147,7 +148,12 @@ a { color: inherit; }
   .sel { gap: 5px; margin-bottom: 10px; }
   .sel button { font-size: 12px; padding: 0 10px; }
   .sortbar { gap: 6px; margin-bottom: 8px; }
-  .seg2 button { font-size: 13px; padding: 0 12px; }
+  .seg2 button { font-size: 13px; padding: 0 9px; }
+  /* 범례를 한두 줄로 압축: 대분류 제목은 숨기고 소분류 색만 (기타처럼 하나뿐인 대분류는 그대로) */
+  .legend { display: flex !important; flex-wrap: wrap; gap: 3px 10px; }
+  .lg { flex-direction: row; flex-wrap: wrap; gap: 3px 10px; }
+  .lg b:not(:only-child) { display: none; }
+  .lg b { font-size: 12px; font-weight: 400; }
   .sh { font-size: 15px; margin-top: 8px; }
   .hl { padding: 5px 8px; margin-bottom: 6px; font-size: 13px; }
   .hl b { font-size: 16px; }

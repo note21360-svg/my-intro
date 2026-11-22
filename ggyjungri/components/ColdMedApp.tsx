@@ -9,6 +9,11 @@ type Group = { m: Major; subs: { c: Minor; rows: Ingredient[] }[] };
 const MAX_PICK = 4;
 const STORAGE_KEY = "coldmed";
 
+const TYPE_LABEL = { cold: "종합감기", cough: "목감기", nose: "코감기" } as const;
+type TypeKey = keyof typeof TYPE_LABEL;
+type BaseKey = "aap" | "nsaid" | "none";
+const BASE_LABEL: Record<BaseKey, string> = { aap: "AAP 기반", nsaid: "NSAIDs 기반", none: "진통 성분 없음" };
+
 const fmt = (v: number) => (Math.round(v * 100) / 100).toLocaleString("ko-KR");
 
 export default function ColdMedApp({ classes, ingredients, series, products }: Props) {
@@ -21,6 +26,9 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
   const [sortMode, setSortMode] = useState<"series" | "ing">("series");
   const [ingSel, setIngSel] = useState("");
   const [desc, setDesc] = useState(true);
+  // 필터: 증상 유형, 진통 성분 기반 (빈 문자열 = 전체)
+  const [typeF, setTypeF] = useState<TypeKey | "">("");
+  const [baseF, setBaseF] = useState<BaseKey | "">("");
 
   // 저장된 비교 선택 불러오기 (실패해도 앱은 정상 동작)
   useEffect(() => {
@@ -126,7 +134,12 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
     window.scrollTo(0, 0);
   };
 
-  const visible = ordered.filter((p) => on.has(p.series));
+  // 진통 성분 기반: 해열진통제(아세트아미노펜) 함유 → AAP, NSAIDs(이부프로펜 등) 함유 → NSAIDs
+  const baseOf = (p: Product): BaseKey => {
+    const cls = Object.keys(p.ingredients).map((k) => ingById.get(k)?.class);
+    return cls.includes("ns") ? "nsaid" : cls.includes("ap") ? "aap" : "none";
+  };
+  const visible = ordered.filter((p) => on.has(p.series) && (!typeF || p.type === typeF) && (!baseF || baseOf(p) === baseF));
   const ingMode = sortMode === "ing" && !!ingSel;
   const listed = ingMode
     ? visible
@@ -183,6 +196,19 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
         {tab === "prod" ? (
           <section>
             <div className="sortbar">
+              <div className="seg2" role="group" aria-label="증상 유형">
+                <button aria-pressed={typeF === ""} onClick={() => setTypeF("")}>전체</button>
+                {(Object.keys(TYPE_LABEL) as TypeKey[]).map((k) => (
+                  <button key={k} aria-pressed={typeF === k} onClick={() => setTypeF(k)}>{TYPE_LABEL[k]}</button>
+                ))}
+              </div>
+              <div className="seg2" role="group" aria-label="진통 성분">
+                <button aria-pressed={baseF === ""} onClick={() => setBaseF("")}>전체</button>
+                <button aria-pressed={baseF === "aap"} onClick={() => setBaseF("aap")}>AAP</button>
+                <button aria-pressed={baseF === "nsaid"} onClick={() => setBaseF("nsaid")}>NSAIDs</button>
+              </div>
+            </div>
+            <div className="sortbar">
               <div className="seg2" role="group" aria-label="정렬 기준">
                 <button aria-pressed={sortMode === "series"} onClick={() => setSortMode("series")}>시리즈별</button>
                 <button aria-pressed={sortMode === "ing"} onClick={() => setSortMode("ing")}>성분 함량순</button>
@@ -235,7 +261,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
               })}
             </div>
             <div className="cards">
-              {visible.length === 0 && <div className="empty">선택된 시리즈가 없습니다.</div>}
+              {visible.length === 0 && <div className="empty">조건에 맞는 품목이 없습니다. 시리즈·유형·진통 성분 선택을 바꿔 보세요.</div>}
               {listed.map((p, idx) => {
                 const s = seriesById.get(p.series);
                 const newSeries = !ingMode && (idx === 0 || listed[idx - 1].series !== p.series);
@@ -276,7 +302,11 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                         <span>비교</span>
                       </label>
                     </div>
-                    <div><Flags p={p} /></div>
+                    <div>
+                      <span className="tag">{TYPE_LABEL[p.type]}</span>
+                      <span className="tag">{BASE_LABEL[baseOf(p)]}</span>
+                      <Flags p={p} />
+                    </div>
                     <details
                       className="acc"
                       open={open.has(p.id)}
