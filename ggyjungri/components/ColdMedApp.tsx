@@ -239,27 +239,35 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                   : "정렬할 성분을 고르세요. 그 성분이 든 품목만 함량순으로 보여 줍니다."}
               </p>
             )}
-            <div className="legend">
-              {classes.major.map((m) => {
-                const cs = classes.minor.filter((c) => c.major === m.id);
-                const solo = cs.length === 1 && cs[0].name === m.name;
-                return (
-                  <div className="lg" key={m.id}>
-                    <b>
-                      {solo && <span className="sw" style={{ background: cs[0].color }} />}
-                      {m.name}
-                    </b>
-                    {!solo &&
-                      cs.map((c) => (
-                        <span key={c.id}>
-                          <span className="sw" style={{ background: c.color }} />
-                          {c.name}
-                        </span>
-                      ))}
-                  </div>
-                );
-              })}
-            </div>
+            <details className="lgd">
+              <summary>
+                색상 안내
+                <span className="dots" aria-hidden="true">
+                  {classes.minor.map((c) => <span key={c.id} className="sw" style={{ background: c.color }} />)}
+                </span>
+              </summary>
+              <div className="legend">
+                {classes.major.map((m) => {
+                  const cs = classes.minor.filter((c) => c.major === m.id);
+                  const solo = cs.length === 1 && cs[0].name === m.name;
+                  return (
+                    <div className="lg" key={m.id}>
+                      <b>
+                        {solo && <span className="sw" style={{ background: cs[0].color }} />}
+                        {m.name}
+                      </b>
+                      {!solo &&
+                        cs.map((c) => (
+                          <span key={c.id}>
+                            <span className="sw" style={{ background: c.color }} />
+                            {c.name}
+                          </span>
+                        ))}
+                    </div>
+                  );
+                })}
+              </div>
+            </details>
             <div className="cards">
               {visible.length === 0 && <div className="empty">조건에 맞는 품목이 없습니다. 시리즈·유형·진통 성분 선택을 바꿔 보세요.</div>}
               {listed.map((p, idx) => {
