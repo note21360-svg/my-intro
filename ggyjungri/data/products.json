@@ -25,10 +25,10 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=198900672",
       "kpic": "https://health.kr/drug/A11A0570A0353",
-      "maker": null
+      "maker": "https://www.dong-wha.co.kr/product/content.asp?t_idx=324&b=20&s=21"
     },
-    "checkedAt": "2026-11-21",
-    "notes": ""
+    "checkedAt": "2026-11-22",
+    "notes": "약학정보원(자료출처: 식약처) 상세정보와 성분·함량·용법·포장 일치. 동화약품 제품정보(판콜)와 성분·함량·용법·포장 일치."
   },
   {
     "id": "panpyrin-q-liq",
@@ -57,10 +57,10 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200700547",
       "kpic": "https://health.kr/drug/A11AKP08F0397",
-      "maker": null
+      "maker": "https://dpharm.co.kr/panpyrin/info"
     },
-    "checkedAt": "2026-11-21",
-    "notes": ""
+    "checkedAt": "2026-11-22",
+    "notes": "약학정보원(자료출처: 식약처) 상세정보와 성분·함량·용법·포장 일치. 동아제약 판피린 브랜드 사이트 제품정보와 원료약품 및 분량·용법·포장 일치."
   },
   {
     "id": "panpyrin-night-liq",
@@ -69,7 +69,7 @@
     "mfdsCode": "202501643",
     "kpicId": "2025070300001",
     "form": "액제 (경구 내용액제)",
-    "pack": "20mL/병, 20mL/병 × 5",
+    "pack": "20mL/병 × 5",
     "unit": "병",
     "perDoseMax": 1,
     "timesPerDayMax": 3,
@@ -87,14 +87,14 @@
       "병용금기: 라사길린·사피나미드·셀레길린"
     ],
     "price": null,
-    "verified": true,
+    "verified": false,
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501643",
       "kpic": "https://health.kr/drug/2025070300001",
       "maker": null
     },
-    "checkedAt": "2026-11-21",
-    "notes": ""
+    "checkedAt": "2026-11-22",
+    "notes": "약학정보원(자료출처: 식약처) 상세정보와 성분·함량·용법·포장 일치. 제약사 홈페이지(동아제약·판피린 브랜드 사이트)에 제품 정보가 없어 두 번째 출처 미확인. 식약처 의약품안전나라는 접속 불가로 직접 확인 못 함."
   },
   {
     "id": "coldprofen-soft",
@@ -107,7 +107,7 @@
     "unit": "캡슐",
     "perDoseMax": 2,
     "timesPerDayMax": 3,
-    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지",
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
     "dosageText": "만 15세 이상 1회 2캡슐, 1일 3회 식후 30분",
     "ingredients": {
       "ibu": 75,
@@ -126,10 +126,10 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502969",
       "kpic": "https://health.kr/drug/2025111800004",
-      "maker": null
+      "maker": "https://www.dkpharm.co.kr/product/view.php?idx=308"
     },
-    "checkedAt": "2026-11-21",
-    "notes": ""
+    "checkedAt": "2026-11-22",
+    "notes": "약학정보원(자료출처: 식약처) 상세정보와 성분·함량·용법·포장 일치. 동국제약 제품정보와 유효성분·용법 일치."
   },
   {
     "id": "coldprofen-cough",
@@ -142,7 +142,7 @@
     "unit": "캡슐",
     "perDoseMax": 2,
     "timesPerDayMax": 3,
-    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지",
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
     "dosageText": "만 15세 이상 1회 2캡슐, 1일 3회 식후 30분",
     "ingredients": {
       "ibu": 75,
@@ -159,10 +159,10 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502970",
       "kpic": "https://health.kr/drug/2025111800005",
-      "maker": null
+      "maker": "https://www.dkpharm.co.kr/product/view.php?idx=310"
     },
-    "checkedAt": "2026-11-21",
-    "notes": ""
+    "checkedAt": "2026-11-22",
+    "notes": "약학정보원(자료출처: 식약처) 상세정보와 성분·함량·용법·포장 일치. 동국제약 제품정보와 유효성분·용법 일치."
   },
   {
     "id": "coldprofen-nose",
@@ -175,7 +175,7 @@
     "unit": "캡슐",
     "perDoseMax": 2,
     "timesPerDayMax": 3,
-    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지",
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
     "dosageText": "만 15세 이상 1회 2캡슐, 1일 3회 식후 30분",
     "ingredients": {
       "ibu": 75,
@@ -188,9 +188,9 @@
     "sources": {
       "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502952",
       "kpic": "https://health.kr/drug/2025111700004",
-      "maker": null
+      "maker": "https://www.dkpharm.co.kr/product/view.php?idx=309"
     },
-    "checkedAt": "2026-11-21",
-    "notes": ""
+    "checkedAt": "2026-11-22",
+    "notes": "약학정보원(자료출처: 식약처) 상세정보와 성분·함량·용법·포장 일치. 동국제약 제품정보와 유효성분·용법 일치."
   }
 ]
