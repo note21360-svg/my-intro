@@ -136,7 +136,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
               <button aria-pressed={daily} onClick={() => setDaily(true)}>1일 최대</button>
             </div>
           </div>
-          <div className="row" style={{ marginTop: 10 }}>
+          <div className="row chips" style={{ marginTop: 10 }}>
             {series.map((s) => (
               <button key={s.id} className="chip" aria-pressed={on.has(s.id)} onClick={() => toggleSeries(s.id)}>
                 {s.name}
@@ -194,7 +194,10 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                     <div className="ch">
                       <div>
                         <h3>{p.name}</h3>
-                        <div className="meta">{s?.name} · {s?.maker}</div>
+                        <div className="meta">
+                          {s?.name} · {s?.maker}
+                          {p.permitHolder && p.permitHolder !== s?.maker && <> (허가: {p.permitHolder})</>}
+                        </div>
                       </div>
                       <label className="pick" title="비교에 담기">
                         <input
@@ -392,7 +395,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                 {p.sources.kpic && <><a href={p.sources.kpic} target="_blank" rel="noreferrer">약학정보원</a> · </>}
                 {p.sources.mfds && <><a href={p.sources.mfds} target="_blank" rel="noreferrer">식약처 {p.mfdsCode}</a></>}
                 {maker && <> · <a href={maker} target="_blank" rel="noreferrer">{s?.maker} 홈페이지</a></>}
-                <span className="meta"> · 확인 {p.checkedAt}</span>
+                <span className="meta"> · 확인 {p.checkedAt}{p.permitHolder && p.permitHolder !== s?.maker ? ` · 허가: ${p.permitHolder}` : ""}</span>
                 {p.notes && <div className="meta">{p.notes}</div>}
               </li>
             );

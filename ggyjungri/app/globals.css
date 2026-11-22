@@ -97,6 +97,10 @@ a { color: inherit; }
 [hidden] { display: none !important; }
 @media (max-width: 600px) {
   .top h1 { font-size: 18px; }
+  /* 시리즈 칩이 많아 휴대폰에서는 한 줄 가로 스크롤 */
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: -16px; padding-inline: 16px; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
   .ct th, .ct td { padding: 7px 6px; }
   .ct thead th { min-width: 112px; }
 }

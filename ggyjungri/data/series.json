@@ -1,5 +1,68 @@
 [
-  { "id": "pancol", "name": "판콜", "maker": "동화약품", "homepage": "https://www.dong-wha.co.kr" },
-  { "id": "panpyrin", "name": "판피린", "maker": "동아제약", "homepage": "https://www.dapharm.com/ko" },
-  { "id": "coldprofen", "name": "콜드프로펜", "maker": "동국제약", "homepage": "https://www.dkpharm.co.kr" }
+  {
+    "id": "pancol",
+    "name": "판콜",
+    "maker": "동화약품",
+    "homepage": "https://www.dong-wha.co.kr"
+  },
+  {
+    "id": "powercold",
+    "name": "파워콜",
+    "maker": "동화약품",
+    "homepage": null
+  },
+  {
+    "id": "panpyrin",
+    "name": "판피린",
+    "maker": "동아제약",
+    "homepage": "https://www.dapharm.com/ko"
+  },
+  {
+    "id": "modcol",
+    "name": "모드콜",
+    "maker": "종근당",
+    "homepage": null
+  },
+  {
+    "id": "coldprofen",
+    "name": "콜드프로펜",
+    "maker": "동국제약",
+    "homepage": "https://www.dkpharm.co.kr"
+  },
+  {
+    "id": "ibucatch",
+    "name": "이부캐치",
+    "maker": "동국제약",
+    "homepage": null
+  },
+  {
+    "id": "maxibufen",
+    "name": "맥시부펜",
+    "maker": "한미약품",
+    "homepage": null
+  },
+  {
+    "id": "exxencol",
+    "name": "엑쎈콜",
+    "maker": "보령컨슈머헬스",
+    "homepage": null
+  },
+  {
+    "id": "carolb",
+    "name": "캐롤비",
+    "maker": "일동제약",
+    "homepage": null
+  },
+  {
+    "id": "pensak",
+    "name": "펜싹",
+    "maker": "제일헬스사이언스",
+    "homepage": null
+  },
+  {
+    "id": "coldaewon",
+    "name": "콜대원",
+    "maker": "대원제약",
+    "homepage": null
+  }
 ]

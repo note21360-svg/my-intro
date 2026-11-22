@@ -31,6 +31,165 @@
     "notes": "식약처 의약품 제품 허가정보 API(2026-11-22 조회)와 원료약품 및 분량 일치, 허가 상태 정상. 약학정보원 상세정보와 성분·함량·용법·포장 일치. 동화약품 제품정보(판콜)와 성분·함량·용법·포장 일치."
   },
   {
+    "id": "powercold-s",
+    "series": "powercold",
+    "name": "파워콜에스연질캡슐",
+    "mfdsCode": "201003989",
+    "kpicId": "2010061500008",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/PTP",
+    "unit": "캡슐",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "성인 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "성인 1회 1캡슐, 1일 3회, 식후 30분에 복용한다",
+    "ingredients": {
+      "apap": 300.0,
+      "caf": 30.0,
+      "gua": 80.0,
+      "mep": 20.0,
+      "cpm": 2.5
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201003989",
+      "kpic": "https://health.kr/drug/2010061500008",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "동화약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "powercold-cough",
+    "series": "powercold",
+    "name": "파워콜코프연질캡슐",
+    "mfdsCode": "201801178",
+    "kpicId": "2018031600004",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/PTP",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 : 1일 3회, 1회 2캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "gua": 38.0,
+      "mep": 6.25,
+      "tip": 5.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201801178",
+      "kpic": "https://health.kr/drug/2018031600004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "동화약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "powercold-nose",
+    "series": "powercold",
+    "name": "파워콜노즈연질캡슐",
+    "mfdsCode": "201801538",
+    "kpicId": "2018041000003",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP포장)",
+    "unit": "캡슐",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 : 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 250.0,
+      "phe": 10.0,
+      "mep": 22.0,
+      "cpm": 2.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201801538",
+      "kpic": "https://health.kr/drug/2018041000003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "동화약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "powercold-cap",
+    "series": "powercold",
+    "name": "파워콜캡슐",
+    "mfdsCode": "201900977",
+    "kpicId": "2019022200070",
+    "form": "경질캡슐 (경구 내용고형)",
+    "pack": "10 캡슐",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "성인(만 15세 이상) : 1일 3회, 1회 2캡슐을 식후 30분에 복용한다.",
+    "ingredients": {
+      "apap": 200.0,
+      "dxm": 7.5,
+      "mep": 10.0,
+      "gua": 40.0,
+      "cpm": 1.25,
+      "caf": 17.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201900977",
+      "kpic": "https://health.kr/drug/2019022200070",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "정우신약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "powercold-nose-q",
+    "series": "powercold",
+    "name": "파워콜노즈큐연질캡슐",
+    "mfdsCode": "202500153",
+    "kpicId": "2025012100006",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피[(10캡슐/PTP*1)]",
+    "unit": "캡슐",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인 : 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 250.0,
+      "cpm": 2.5,
+      "pse": 27.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202500153",
+      "kpic": "https://health.kr/drug/2025012100006",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "동화약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
     "id": "panpyrin-q-liq",
     "series": "panpyrin",
     "name": "판피린큐액",
@@ -95,6 +254,467 @@
     },
     "checkedAt": "2026-11-22",
     "notes": "식약처 의약품 제품 허가정보 API(2026-11-22 조회)와 원료약품 및 분량 일치, 허가 상태 정상. 약학정보원 상세정보와 성분·함량·용법·포장 일치. 제약사 홈페이지에는 제품 정보 없음."
+  },
+  {
+    "id": "modcol-syrup",
+    "series": "modcol",
+    "name": "모드콜시럽",
+    "mfdsCode": "200400116",
+    "kpicId": "3ikznxh0huioi",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "1병(100ml/병×1)",
+    "unit": "mL",
+    "perDoseMax": 20,
+    "timesPerDayMax": 4,
+    "age": "만 15세 이상 20mL · 만 11~15세 13.4mL · 만 7~11세 10mL · 만 3~7세 6.7mL · 만 2~3세 5mL · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음의 1 회 용량을 1 일 4회 식후 30분 및 취침 시에 복용한다. 원칙적으로 복용간격은 4시간으로 한다. 만 15 세 이상 20㎖ 만 11 세 이상 - 만 15 세 미만 13.4㎖ 만 7 세 이상 - 만 11 세 미만 10㎖ 만 3 세 이상 - 만 7 세 미만 6.7㎖ 만 2 세 이상 - 만 3 세 미만 5㎖ 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 7.5,
+      "cpm": 0.063,
+      "mep": 0.4688,
+      "dxm": 0.375,
+      "pgs": 2.0,
+      "caf": 1.25
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=200400116",
+      "kpic": "https://health.kr/drug/3ikznxh0huioi",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 1회 정수가 없는 병 시럽(100mL)이라 함량을 1mL 기준으로 저장. DL-메틸에페드린염산염은 식약처 46.88mg/100mL, 약학정보원 46.875mg/100mL(반올림 차이) → 식약처 값 사용."
+  },
+  {
+    "id": "modco-s",
+    "series": "modcol",
+    "name": "모드코에스연질캡슐",
+    "mfdsCode": "201203128",
+    "kpicId": "2012042500005",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피,20캡슐/피티피[10캡슐/PTP x 2]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "cpm": 1.25,
+      "pse": 15.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201203128",
+      "kpic": "https://health.kr/drug/2012042500005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-s",
+    "series": "modcol",
+    "name": "모드콜에스연질캡슐",
+    "mfdsCode": "201204330",
+    "kpicId": "2012050900002",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피,20캡슐/피티피[10캡슐/PTP x 2]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "cpm": 1.25,
+      "mep": 12.5,
+      "pse": 15.0,
+      "dxm": 8.0,
+      "gua": 41.6
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201204330",
+      "kpic": "https://health.kr/drug/2012050900002",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcough-s",
+    "series": "modcol",
+    "name": "모드코프에스연질캡슐",
+    "mfdsCode": "201204389",
+    "kpicId": "2012050900006",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피,20캡슐/피티피[10캡슐/PTP x 2]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "mep": 12.5,
+      "dxm": 8.0,
+      "gua": 40.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201204389",
+      "kpic": "https://health.kr/drug/2012050900006",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-nose-syrup",
+    "series": "modcol",
+    "name": "모드콜노즈시럽",
+    "mfdsCode": "202007833",
+    "kpicId": "2020111300012",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "5밀리리터/포[x10포/box],20밀리리터/포[x5포/box]",
+    "unit": "mL",
+    "perDoseMax": 20,
+    "timesPerDayMax": 4,
+    "age": "만 12세 이상(44kg 이상) 20mL · 6~12세 10mL · 2~6세 5mL · 만 2세 미만 투여 금지",
+    "dosageText": "4-6시간마다 다음 용량을 복용하고, 24시간 동안 4회를 넘지 않는다. 연령 체중 1회 투여량 2-6세 6-12세 12세-성인 11-21kg 22-43kg 44kg 이상 5mL 10mL 20mL 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다. 1회 투여량 복용 후 남은 약은 버린다(포 포장 제품에 한함).",
+    "ingredients": {
+      "cpm": 0.2,
+      "pse": 3.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202007833",
+      "kpic": "https://health.kr/drug/2020111300012",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 성인 용량은 '12세-성인(44kg 이상) 1회 20mL, 24시간 동안 4회 이내'."
+  },
+  {
+    "id": "modcol-cough-syrup",
+    "series": "modcol",
+    "name": "모드콜코프시럽",
+    "mfdsCode": "202203444",
+    "kpicId": "2022090100005",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "20밀리리터/포[x5포/box],5밀리리터/포[x10포/box]",
+    "unit": "mL",
+    "perDoseMax": 20,
+    "timesPerDayMax": 6,
+    "age": "만 15세 이상 20mL · 만 11~15세 13.3mL · 만 8~11세 10mL · 만 5~8세 6.7mL · 만 3~5세 5mL · 만 2~3세 4mL · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "1일 5-6회, 약 4시간 간격을 두고 복용한다. 만 15세 이상 : 1회 20ml 만 11세 이상 - 만 15세 미만 : 1회 13.3ml 만 8세 이상 - 만 11세 미만 : 1회 10ml 만 5세이상 - 만 8세 미만 : 1회 6.7ml 만 3세 이상 - 만 5세 미만 : 1회 5ml 만 2세 이상 - 만 3세 미만 : 1회 4ml - 만2세 미만의 영·유아를 대상으로 하는 용법은 인정하지 아니한다. 다만, 꼭 필요할 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "cpm": 0.1,
+      "mep": 0.625,
+      "dxm": 0.5,
+      "gua": 2.5
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202203444",
+      "kpic": "https://health.kr/drug/2022090100005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·20mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 5-6회' → 최대 6회로 계산."
+  },
+  {
+    "id": "modcol-cold-syrup",
+    "series": "modcol",
+    "name": "모드콜콜드시럽",
+    "mfdsCode": "202203513",
+    "kpicId": "2022090800004",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "5밀리리터/포[x10포/box],15밀리리터/포[x5포/box]",
+    "unit": "mL",
+    "perDoseMax": 15,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 15mL · 만 11~15세 10mL · 만 7~11세 7.5mL · 만 3~7세 5mL · 만 2~3세 3.75mL · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "1일 3회 식후 30분 및 필요한 경우 취침시에 복용한다. 원칙적으로 복용간격은 4시간으로 한다. 만 15세 이상 : 1회 15ml 만 11세 이상 - 만 15세 미만 : 1회 10ml 만 7세 이상 - 만 11세 미만 : 1회 7.5ml 만 3세이상 - 만 7세 미만 : 1회 5ml 만 2세 이상 - 만 3세 미만 : 1회 3.75ml - 만2세 미만의 영·유아를 대상으로 하는 용법은 인정하지 아니한다. 다만, 꼭 필요할 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 10.0,
+      "cpm": 0.125,
+      "mep": 1.25,
+      "dxm": 0.75
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202203513",
+      "kpic": "https://health.kr/drug/2022090800004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 5mL·15mL 포 두 가지라 함량을 1mL 기준으로 저장. 용법 '1일 3회 식후 및 필요한 경우 취침 시' → 3회로 계산."
+  },
+  {
+    "id": "modcol-ibu-nose",
+    "series": "modcol",
+    "name": "모드콜이부노즈연질캡슐",
+    "mfdsCode": "202601089",
+    "kpicId": "2026041600003",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "pse": 15.0,
+      "cpm": 1.25
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601089",
+      "kpic": "https://health.kr/drug/2026041600003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-cough-strong",
+    "series": "modcol",
+    "name": "모드콜코프스트롱연질캡슐",
+    "mfdsCode": "202601190",
+    "kpicId": "2026042400005",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 250.0,
+      "gua": 41.6,
+      "dxm": 8.0,
+      "mep": 12.5,
+      "brh": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601190",
+      "kpic": "https://health.kr/drug/2026042400005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-ibu-cold",
+    "series": "modcol",
+    "name": "모드콜이부콜드연질캡슐",
+    "mfdsCode": "202601208",
+    "kpicId": "2026042700003",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "mep": 12.5,
+      "gua": 41.6,
+      "dxm": 8.0,
+      "pse": 15.0,
+      "cpm": 1.25,
+      "brh": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601208",
+      "kpic": "https://health.kr/drug/2026042700003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-ibu-cough",
+    "series": "modcol",
+    "name": "모드콜이부코프연질캡슐",
+    "mfdsCode": "202601272",
+    "kpicId": "2026043000001",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "mep": 12.5,
+      "brh": 2.0,
+      "dxm": 8.0,
+      "gua": 41.6
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601272",
+      "kpic": "https://health.kr/drug/2026043000001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-t-night",
+    "series": "modcol",
+    "name": "모드콜티나이트발포정",
+    "mfdsCode": "202601276",
+    "kpicId": "2026043000002",
+    "form": "현탁정 (경구 내용고형)",
+    "pack": "12정/피티피[(6정/PTP)x2/상자],1정/포,6포/상자[1포(1정/포)X6EA],30포/상자[1포(1정/포)X30EA]",
+    "unit": "정",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1정 (물에 녹여 복용) · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 1정을 식후 30분에 반드시 물에 녹여서 복용한다.",
+    "ingredients": {
+      "apap": 500.0,
+      "vc": 160.0,
+      "dph": 25.0,
+      "dxm": 16.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601276",
+      "kpic": "https://health.kr/drug/2026043000002",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-cold-strong",
+    "series": "modcol",
+    "name": "모드콜콜드스트롱연질캡슐",
+    "mfdsCode": "202601383",
+    "kpicId": "2026051300010",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 250.0,
+      "gua": 41.6,
+      "pse": 15.0,
+      "dxm": 8.0,
+      "cpm": 1.25,
+      "mep": 12.5,
+      "brh": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601383",
+      "kpic": "https://health.kr/drug/2026051300010",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "modcol-nose-strong",
+    "series": "modcol",
+    "name": "모드콜노즈스트롱연질캡슐",
+    "mfdsCode": "202601384",
+    "kpicId": "2026051300011",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/피티피",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 250.0,
+      "pse": 15.0,
+      "cpm": 1.25
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202601384",
+      "kpic": "https://health.kr/drug/2026051300011",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "종근당",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
   },
   {
     "id": "coldprofen-soft",
@@ -192,5 +812,806 @@
     },
     "checkedAt": "2026-11-22",
     "notes": "식약처 의약품 제품 허가정보 API(2026-11-22 조회)와 원료약품 및 분량 일치, 허가 상태 정상. 약학정보원 상세정보와 성분·함량·용법·포장 일치. 동국제약 제품정보와 유효성분·용법 일치."
+  },
+  {
+    "id": "ibucatch-cold",
+    "series": "ibucatch",
+    "name": "이부캐치콜드연질캡슐",
+    "mfdsCode": "202503366",
+    "kpicId": "2025122400003",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "12캡슐/피티피[12캡슐/상자(12캡슐/PTP x 1)]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상~만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "gua": 27.78,
+      "pse": 15.0,
+      "dxm": 5.34,
+      "cpm": 1.25,
+      "mep": 12.5,
+      "brh": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202503366",
+      "kpic": "https://health.kr/drug/2025122400003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "신일제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "ibucatch-cough",
+    "series": "ibucatch",
+    "name": "이부캐치코프연질캡슐",
+    "mfdsCode": "202600048",
+    "kpicId": "2026010900003",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "12캡슐/피티피[12캡슐/상자(12캡슐/PTP x 1)]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상~만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "gua": 41.66,
+      "dxm": 8.0,
+      "mep": 12.5,
+      "brh": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202600048",
+      "kpic": "https://health.kr/drug/2026010900003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "신일제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "maxibufen-nose",
+    "series": "maxibufen",
+    "name": "맥시부펜노즈연질캡슐",
+    "mfdsCode": "202501849",
+    "kpicId": "2025072300006",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "12캡슐/상자[12캡슐/PTP×1]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "pse": 15.0,
+      "cpm": 1.25,
+      "brh": 2.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202501849",
+      "kpic": "https://health.kr/drug/2025072300006",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "한미약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "maxibufen-cold",
+    "series": "maxibufen",
+    "name": "맥시부펜콜드연질캡슐",
+    "mfdsCode": "202502043",
+    "kpicId": "2025080700001",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "12캡슐/상자[12캡슐/PTP×1]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "gua": 41.66,
+      "pse": 15.0,
+      "dxm": 8.0,
+      "cpm": 1.25,
+      "mep": 12.5
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502043",
+      "kpic": "https://health.kr/drug/2025080700001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "한미약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "maxibufen-cough",
+    "series": "maxibufen",
+    "name": "맥시부펜코프연질캡슐",
+    "mfdsCode": "202502046",
+    "kpicId": "2025080700004",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "12캡슐/상자[12캡슐/PTP×1]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "ibu": 75.0,
+      "gua": 41.66,
+      "dxm": 8.0,
+      "mep": 12.5,
+      "brh": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202502046",
+      "kpic": "https://health.kr/drug/2025080700004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "한미약품",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "exxencol",
+    "series": "exxencol",
+    "name": "엑쎈콜연질캡슐",
+    "mfdsCode": "201801926",
+    "kpicId": "2018050900001",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP*1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인 : 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상 ~ 만 15세 미만: 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "cpm": 1.25,
+      "mep": 12.5,
+      "pse": 15.0,
+      "dxm": 8.0,
+      "gua": 41.66
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201801926",
+      "kpic": "https://health.kr/drug/2018050900001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "carolb-cough",
+    "series": "carolb",
+    "name": "캐롤비코프연질캡슐",
+    "mfdsCode": "201802397",
+    "kpicId": "2018061200001",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP*1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인 : 1일 3회, 1회 2캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 180.0,
+      "cpm": 1.25,
+      "clp": 4.0,
+      "gua": 41.6,
+      "vb2": 2.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201802397",
+      "kpic": "https://health.kr/drug/2018061200001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "carolb-nose",
+    "series": "carolb",
+    "name": "캐롤비노즈연질캡슐",
+    "mfdsCode": "201802398",
+    "kpicId": "2018061200002",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP*1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인 : 1일 3회, 1회 2캡슐 식후 30분에 복용 - 만 8세 이상~만 15세 미만 : 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 180.0,
+      "bph": 2.66,
+      "pse": 15.0,
+      "vb2": 2.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201802398",
+      "kpic": "https://health.kr/drug/2018061200002",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "carolb-cold",
+    "series": "carolb",
+    "name": "캐롤비콜드연질캡슐",
+    "mfdsCode": "201802672",
+    "kpicId": "2018062800008",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP*1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인 : 1일 3회, 1회 2캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 180.0,
+      "cpm": 1.25,
+      "pse": 15.0,
+      "mep": 12.5,
+      "dxm": 8.0,
+      "gua": 20.84,
+      "vb2": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201802672",
+      "kpic": "https://health.kr/drug/2018062800008",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "carolb-cough-plus",
+    "series": "carolb",
+    "name": "캐롤비코프플러스연질캡슐",
+    "mfdsCode": "202503119",
+    "kpicId": "2025120100004",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "내수용 - 10캡슐/상자[(10캡슐/PTPx1)]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인 : 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상~만 15세 미만 : 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "cpm": 1.25,
+      "dxm": 8.0,
+      "gua": 41.6,
+      "vb2": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202503119",
+      "kpic": "https://health.kr/drug/2025120100004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "carolb-cold-plus",
+    "series": "carolb",
+    "name": "캐롤비콜드플러스연질캡슐",
+    "mfdsCode": "202600695",
+    "kpicId": "2026031000002",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "내수용  - 10캡슐/상자[10캡슐/PTPx1]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인, 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상~만 15세 미만, 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "cpm": 1.25,
+      "pse": 15.0,
+      "mep": 12.5,
+      "dxm": 8.0,
+      "gua": 27.8,
+      "vb2": 2.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202600695",
+      "kpic": "https://health.kr/drug/2026031000002",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "carolb-nose-plus",
+    "series": "carolb",
+    "name": "캐롤비노즈플러스연질캡슐",
+    "mfdsCode": "202600754",
+    "kpicId": "2026031600001",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "내수용 - 10캡슐/상자[10캡슐/PTPx1]",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~15세 1캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인, 1일 3회, 1회 2캡슐 식후 30분에 복용 만 8세 이상~만 15세 미만, 1일 3회, 1회 1캡슐 식후 30분에 복용",
+    "ingredients": {
+      "apap": 200.0,
+      "bph": 2.66,
+      "pse": 15.0,
+      "vb2": 2.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202600754",
+      "kpic": "https://health.kr/drug/2026031600001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "알피바이오",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "pensak-co",
+    "series": "pensak",
+    "name": "펜싹코연질캡슐",
+    "mfdsCode": "201604641",
+    "kpicId": "2016080100057",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/PTP",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후30분에 복용",
+    "ingredients": {
+      "apap": 180.0,
+      "pse": 15.0,
+      "mep": 12.5,
+      "dxm": 8.0,
+      "tpl": 0.66
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201604641",
+      "kpic": "https://health.kr/drug/2016080100057",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "코스맥스파마",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "pensak-cough",
+    "series": "pensak",
+    "name": "펜싹코프연질캡슐",
+    "mfdsCode": "201604711",
+    "kpicId": "2016080100028",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP포장 x 1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후30분에 복용",
+    "ingredients": {
+      "apap": 180.0,
+      "gua": 41.66,
+      "nos": 4.0,
+      "dxm": 8.0,
+      "tpl": 0.66
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201604711",
+      "kpic": "https://health.kr/drug/2016080100028",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "코스맥스파마",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "pensak-col",
+    "series": "pensak",
+    "name": "펜싹콜연질캡슐",
+    "mfdsCode": "201604720",
+    "kpicId": "2016080200004",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐/PTP",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상 및 성인: 1일 3회, 1회 2캡슐 식후30분에 복용",
+    "ingredients": {
+      "apap": 180.0,
+      "gua": 20.84,
+      "pse": 15.0,
+      "mep": 12.5,
+      "dxm": 8.0,
+      "tpl": 0.66
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201604720",
+      "kpic": "https://health.kr/drug/2016080200004",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "코스맥스파마",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "pensak-fresh",
+    "series": "pensak",
+    "name": "펜싹프레쉬연질캡슐",
+    "mfdsCode": "201901959",
+    "kpicId": "2019040500086",
+    "form": "연질캡슐 (경구 내용고형)",
+    "pack": "10캡슐(10캡슐/PTP*1)",
+    "unit": "캡슐",
+    "perDoseMax": 2,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 2캡슐 · 만 8~14세 1캡슐",
+    "dosageText": "성인 및 15세 이상의 소아 : 1일 3회, 1회 2캡슐을 식후에 경구투여한다. 8세~14세 소아 : 1일 3회, 1회 1캡슐을 식후에 경구투여한다.",
+    "ingredients": {
+      "cbc": 125.0,
+      "brh": 2.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201901959",
+      "kpic": "https://health.kr/drug/2019040500086",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "제일헬스사이언스",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 거담 성분만 들어 있는 제품(종합감기약 아님)."
+  },
+  {
+    "id": "coldaewon-cold",
+    "series": "coldaewon",
+    "name": "콜대원콜드시럽",
+    "mfdsCode": "201503959",
+    "kpicId": "2015061900005",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "수출용: 20mL/포×5, 20mL/포×20",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 11~15세 2/3포 · 만 7~11세 1/2포 · 만 3~7세 1/3포 · 만 2~3세 1/4포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음 1회 용량을 1일 3회 식후 30분에 복용 만 15세 이상 1회 1포(20mL) 만 11세 이상 - 만 15세 미만 1회 2/3포 만 7세 이상 - 만 11세 미만 1회 1/2포 만 3세 이상 - 만 7세 미만 1회 1/3포 만 2세 이상 - 만 3세 미만 1회 1/4포 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다",
+    "ingredients": {
+      "apap": 325.0,
+      "cpm": 2.5,
+      "ptx": 12.0,
+      "mep": 18.0,
+      "gua": 42.0,
+      "caf": 30.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201503959",
+      "kpic": "https://health.kr/drug/2015061900005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상. 식약처 허가 포장단위가 수출용만 기재됨(국내 유통 여부 확인 필요)."
+  },
+  {
+    "id": "coldaewon-cold-s",
+    "series": "coldaewon",
+    "name": "콜대원콜드에스시럽",
+    "mfdsCode": "201603301",
+    "kpicId": "2016061000001",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "내수용: 20mL/포 X 5, 수출용: 20mL/포 X 20, 20mL/포 X 30, 20mL/포 X 40",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 11~15세 2/3포 · 만 7~11세 1/2포 · 만 3~7세 1/3포 · 만 2~3세 1/4포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음 1회 용량을 1일 3회 식후 30분에 복용. 원칙적으로 복용간격은 4시간으로 한다. 만 15세 이상 1회 1포(20ml) 만 11세 이상 – 만 15세 미만 1회 2/3포 만7세 이상 – 만 11세 미만 1회 1/2포 만 3세 이상 – 만 7세 미만 1회 1/3포 만 2세 이상 – 만 3세 미만 1회 1/4포 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 325.0,
+      "cpm": 2.5,
+      "ptx": 8.0,
+      "mep": 18.0,
+      "gua": 42.0,
+      "caf": 25.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201603301",
+      "kpic": "https://health.kr/drug/2016061000001",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "coldaewon-nose-s",
+    "series": "coldaewon",
+    "name": "콜대원노즈에스시럽",
+    "mfdsCode": "201603302",
+    "kpicId": "2016061000002",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "(내수) 20mL/포×5 (수출) 20mL/포×20",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 20mL(1포) · 만 11~15세 13mL · 만 7~11세 10mL · 만 3~7세 6.5mL · 만 2~3세 5mL · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음 1회 용량을 1일 3회 식후 30분에 복용. 원칙적으로 복용간격은 4시간으로 한다. 만 15세 이상 1회 20mL 만 11세 이상 - 만 15세 미만 1회 13mL 만 7세 이상 - 만 11세 미만 1회 10mL 만 3세 이상 - 만 7세 미만 1회 6.5mL 만 2세 이상 - 만 3세 미만 1회 5mL 만2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 325.0,
+      "cpm": 2.5,
+      "caf": 25.0,
+      "pse": 30.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201603302",
+      "kpic": "https://health.kr/drug/2016061000002",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "coldaewon-cough-s",
+    "series": "coldaewon",
+    "name": "콜대원코프에스시럽",
+    "mfdsCode": "201603303",
+    "kpicId": "2016061000003",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "20mL/포 X 5",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 11~15세 2/3포 · 만 7~11세 1/2포 · 만 3~7세 1/3포 · 만 2~3세 1/4포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음 1회 용량을 1일 3회 식후 30분에 복용. 원칙적으로 복용간격은 4시간으로 한다. 만 15세 이상 1회 1포(20ml) 만 11세 이상 – 만 15세 미만 1회 2/3포 만 7세 이상 – 만 11세 미만 1회 1/2포 만 3세 이상 – 만 7세 미만 1회 1/3포 만 2세 이상 – 만 3세 미만 1회 1/4포 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 325.0,
+      "ptx": 12.0,
+      "mep": 18.0,
+      "gua": 42.0,
+      "caf": 25.0,
+      "pse": 15.0
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=201603303",
+      "kpic": "https://health.kr/drug/2016061000003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "coldaewon-cough-q",
+    "series": "coldaewon",
+    "name": "콜대원코프큐시럽",
+    "mfdsCode": "202104595",
+    "kpicId": "2021061700005",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "내수용  - 5포/팩[20mL/포×5],수출용 - 20포/팩[20mL/포×20]",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 11~15세 2/3포 · 만 7~11세 1/2포 · 만 3~7세 1/3포 · 만 2~3세 1/4포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음의 1회 용량을 1일 3회 식후 30분에 복용한다. 원칙적으로 복용간격은 4시간으로 한다. 만 15세 이상 1포(20 mL) 만 11세 이상 ∼ 만 15세 미만 2/3포 만 7세 이상 ∼ 만 11세 미만 1/2포 만 3세 이상 ∼ 만 7세 미만 1/3포 만 2세 이상 ∼ 만 3세 미만 1/4포 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 325.0,
+      "dxm": 16.0,
+      "mep": 21.0,
+      "gua": 83.0,
+      "caf": 25.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202104595",
+      "kpic": "https://health.kr/drug/2021061700005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "coldaewon-cold-q",
+    "series": "coldaewon",
+    "name": "콜대원콜드큐시럽",
+    "mfdsCode": "202105006",
+    "kpicId": "2021070200002",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "내수용 - 5포/팩[20mL/포×5],수출용 - 20포/팩[20mL/포×20]",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 11~15세 2/3포 · 만 7~11세 1/2포 · 만 3~7세 1/3포 · 만 2~3세 1/4포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음의 1회 용량을 1일 3회 식후 30분에 복용한다. 원칙적으로 복용간격은 4시간으로 한다. 만 15세 이상 1포(20 mL) 만 11세 이상 ∼ 만 15세 미만 2/3포 만 7세 이상 ∼ 만 11세 미만 1/2포 만 3세 이상 ∼ 만 7세 미만 1/3포 만 2세 이상 ∼ 만 3세 미만 1/4포 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 325.0,
+      "cpm": 2.5,
+      "dxm": 16.0,
+      "mep": 21.0,
+      "gua": 83.0,
+      "caf": 25.0
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202105006",
+      "kpic": "https://health.kr/drug/2021070200002",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "coldaewon-night",
+    "series": "coldaewon",
+    "name": "콜대원나이트시럽",
+    "mfdsCode": "202302835",
+    "kpicId": "2023100400003",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "5포/팩[20mL/포 X 5]",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "만 15세 이상의 청소년 및 성인: 1일 3회, 1회 1포 식후 30분에 복용한다. 필요한 경우는 취침 시에 복용하는 것으로 하고 원칙적으로 복용 간격은 4시간으로 한다.",
+    "ingredients": {
+      "apap": 325.0,
+      "dxm": 16.0,
+      "pse": 30.0,
+      "dox": 12.5
+    },
+    "durNotes": [
+      "병용금기: 라사길린·사피나미드·셀레길린"
+    ],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202302835",
+      "kpic": "https://health.kr/drug/2023100400003",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
+  },
+  {
+    "id": "coldaewon-nose-q-s",
+    "series": "coldaewon",
+    "name": "콜대원노즈큐에스시럽",
+    "mfdsCode": "202302925",
+    "kpicId": "2023101900005",
+    "form": "시럽제 (경구 내용액제)",
+    "pack": "내수용  - 5포/팩[20mL/포 X 5],수출용 - 20포/팩[20mL/포 X 20]",
+    "unit": "포",
+    "perDoseMax": 1,
+    "timesPerDayMax": 3,
+    "age": "만 15세 이상 1포 · 만 11~15세 2/3포 · 만 7~11세 1/2포 · 만 3~7세 1/3포 · 만 2~3세 1/4포 · 만 2세 미만 투여 금지, 만 3개월 미만 금기",
+    "dosageText": "다음의 1회 용량을 1일 3회 식후 30분에 복용한다. 만 15세 이상 1포 (20 mL) 만 11세 이상 ∼ 만 15세 미만 2/3포 만 7세 이상 ∼ 만 11세 미만 1/2포 만 3세 이상 ∼ 만 7세 미만 1/3포 만 2세 이상 ∼ 만 3세 미만 1/4포 만 2세 미만에게 투여하지 않는다. 다만, 꼭 필요한 경우 의사의 진료를 받는다.",
+    "ingredients": {
+      "apap": 325.0,
+      "caf": 25.0,
+      "gua": 42.0,
+      "pse": 30.0,
+      "cpm": 2.5
+    },
+    "durNotes": [],
+    "price": null,
+    "verified": true,
+    "sources": {
+      "mfds": "https://nedrug.mfds.go.kr/pbp/CCBBB01/getItemDetail?itemSeq=202302925",
+      "kpic": "https://health.kr/drug/2023101900005",
+      "maker": null
+    },
+    "checkedAt": "2026-11-22",
+    "permitHolder": "대원제약",
+    "notes": "식약처 의약품 제품 허가정보 API와 약학정보원 상세정보의 원료약품 및 분량 일치, 허가 상태 정상."
   }
 ]

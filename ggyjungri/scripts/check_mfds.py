@@ -160,6 +160,12 @@ def main():
 
         materials, basis = parse_materials(item.get("MATERIAL_NAME"))
         print(f"  원료약품 기준: {basis or '(표기 없음)'}")
+        # 앱 단위가 mL 이면(병 시럽 등) 앱 함량은 1mL 기준 → 식약처 값(예: 100mL 중)을 1mL 로 환산해서 비교
+        per_ml = None
+        if p.get("unit") == "mL":
+            m = re.search(r"([\d.,]+)\s*(mL|ml|밀리리터|㎖)", basis)
+            per_ml = float(m.group(1).replace(",", "")) if m else None
+            print(f"  (앱은 1mL 기준 → 식약처 값 ÷ {per_ml})")
         mine = {norm(ingredients[i]["ko"]): (i, mg) for i, mg in p["ingredients"].items()}
         seen = set()
         for name, mg, unit in materials:
@@ -167,6 +173,8 @@ def main():
             if k in mine:
                 seen.add(k)
                 app_mg = mine[k][1]
+                if per_ml and mg is not None:
+                    mg = round(mg / per_ml, 6)
                 ok = mg is not None and abs(mg - app_mg) < 1e-6
                 print(f"   {'일치' if ok else '불일치'}  {name}: 식약처 {mg if mg is not None else '?'} mg({unit}) / 앱 {app_mg} mg")
                 problems += 0 if ok else 1

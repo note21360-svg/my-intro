@@ -35,5 +35,7 @@ export type Product = {
   verified: boolean;
   sources: { mfds: string | null; kpic: string | null; maker: string | null };
   checkedAt: string;
+  /** 식약처 허가 업체 (판매사와 다를 때 표시) */
+  permitHolder?: string;
   notes: string;
 };
