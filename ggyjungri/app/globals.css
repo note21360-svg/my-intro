@@ -39,9 +39,6 @@ body {
 button:focus-visible, select:focus-visible, label:focus-within, summary:focus-visible { outline: 3px solid #ffd43b; outline-offset: 2px; }
 main { padding: 20px 0; }
 .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
-.legend { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px 20px; font-size: 14px; margin: 0 0 14px; }
-.lg { display: flex; flex-direction: column; gap: 2px; }
-.lg b { font-size: 15px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
 .card { border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: var(--bg); }
 .card h3 { margin: 0 0 2px; font-size: 22px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; }
@@ -96,15 +93,6 @@ h2 { font-size: 18px; margin: 28px 0 6px; }
 .src li { margin-bottom: 4px; break-inside: avoid; }
 a { color: inherit; }
 [hidden] { display: none !important; }
-/* 범례: 접었다 펴는 '색상 안내' (기본 접힘, 요약줄에 색 점만 표시) */
-.lgd { margin: 0 0 10px; }
-.lgd summary { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; cursor: pointer; font-size: 13px; color: var(--mut); list-style: none; }
-.lgd summary::-webkit-details-marker { display: none; }
-.lgd summary::after { content: '▾'; font-size: 11px; }
-.lgd[open] summary::after { content: '▴'; }
-.lgd .dots { display: inline-flex; gap: 3px; }
-.lgd .dots .sw { margin: 0; width: 9px; height: 9px; }
-.lgd[open] .legend { margin-top: 6px; }
 /* 정렬 바: 시리즈별 / 성분 함량순 */
 .sortbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 10px; }
 .seg2 { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
@@ -131,8 +119,6 @@ a { color: inherit; }
   .tab { font-size: 13px; padding: 0 12px; }
   .tab .n { font-size: 12px; min-width: 20px; }
   main { padding: 12px 0; }
-  .legend { font-size: 12px; gap: 4px 12px; margin-bottom: 8px; }
-  .lg b { font-size: 13px; }
   .cards { gap: 8px; }
   .card { padding: 10px 12px; }
   .card h3 { font-size: 16px; }
@@ -167,12 +153,6 @@ a { color: inherit; }
   .float button { min-height: 36px; padding: 0 16px; }
   .sel button { min-height: 34px; }
   .acc summary { min-height: 36px; }
-  .lgd summary { font-size: 12px; min-height: 28px; }
-  /* 범례를 한두 줄로 압축: 대분류 제목은 숨기고 소분류 색만 (기타처럼 하나뿐인 대분류는 그대로) */
-  .legend { display: flex !important; flex-wrap: wrap; gap: 3px 10px; }
-  .lg { flex-direction: row; flex-wrap: wrap; gap: 3px 10px; }
-  .lg b:not(:only-child) { display: none; }
-  .lg b { font-size: 12px; font-weight: 400; }
   .sh { font-size: 14px; margin-top: 8px; }
   .hl { padding: 5px 8px; margin-bottom: 6px; font-size: 13px; }
   .hl b { font-size: 16px; }
