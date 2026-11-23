@@ -8,3 +8,7 @@ node_modules/
 
 # Claude Code 개인 설정
 .claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
