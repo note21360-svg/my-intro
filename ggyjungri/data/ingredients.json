@@ -58,16 +58,16 @@
   },
   {
     "id": "mep",
-    "class": "cg",
+    "class": "cgp",
     "ko": "DL-메틸에페드린염산염",
     "en": "DL-Methylephedrine HCl",
     "sedating": false,
     "pregnancyDUR2": false,
-    "notes": "KPIC 분류상 기관지확장제이나 사용자 결정에 따라 진해제로 분류"
+    "notes": "KPIC 분류상 기관지확장제이나 사용자 결정에 따라 말초성 진해제로 분류"
   },
   {
     "id": "dxm",
-    "class": "cg",
+    "class": "cgc",
     "ko": "덱스트로메토르판브롬화수소산염수화물",
     "en": "Dextromethorphan HBr hydrate",
     "sedating": false,
@@ -75,15 +75,16 @@
   },
   {
     "id": "ptx",
-    "class": "cg",
+    "class": "cgc",
     "ko": "펜톡시베린시트르산염",
     "en": "Pentoxyverine citrate",
     "sedating": false,
-    "pregnancyDUR2": false
+    "pregnancyDUR2": false,
+    "notes": "현재 수록 품목에는 없음. 분류는 Claude가 임시로 배정(사용자 미확인)"
   },
   {
     "id": "tip",
-    "class": "cg",
+    "class": "cgc",
     "ko": "티페피딘시트르산염",
     "en": "Tipepidine citrate",
     "sedating": false,
@@ -91,7 +92,7 @@
   },
   {
     "id": "nos",
-    "class": "cg",
+    "class": "cgc",
     "ko": "노스카핀염산염수화물",
     "en": "Noscapine HCl hydrate",
     "sedating": false,
@@ -99,7 +100,7 @@
   },
   {
     "id": "gua",
-    "class": "ex",
+    "class": "exe",
     "ko": "구아이페네신",
     "en": "Guaifenesin",
     "sedating": false,
@@ -107,7 +108,7 @@
   },
   {
     "id": "brh",
-    "class": "ex",
+    "class": "exa",
     "ko": "브롬헥신염산염",
     "en": "Bromhexine HCl",
     "sedating": false,
@@ -141,7 +142,7 @@
   },
   {
     "id": "clp",
-    "class": "cg",
+    "class": "cgc",
     "ko": "클로페라스틴염산염",
     "en": "Cloperastine HCl",
     "sedating": false,
@@ -149,15 +150,16 @@
   },
   {
     "id": "pgs",
-    "class": "ex",
+    "class": "exe",
     "ko": "구아야콜설폰산칼륨",
     "en": "Potassium guaiacolsulfonate",
     "sedating": false,
-    "pregnancyDUR2": false
+    "pregnancyDUR2": false,
+    "notes": "현재 수록 품목에는 없음. 분류는 Claude가 임시로 배정(사용자 미확인)"
   },
   {
     "id": "cbc",
-    "class": "ex",
+    "class": "exm",
     "ko": "카르보시스테인",
     "en": "Carbocysteine",
     "sedating": false,

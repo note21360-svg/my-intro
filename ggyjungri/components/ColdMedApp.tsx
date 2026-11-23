@@ -178,8 +178,9 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
         .filter((g) => g.class === c.id)
         .map((g) => ({ g, n: products.filter((p) => p.ingredients[g.id]).length }))
         .filter((x) => x.n > 0),
-    }))
-    .filter((x) => x.items.length);
+    }));
+  // 대분류 → 소분류 묶음 (성분 없는 소분류도 남겨 '해당 없음'으로 표시)
+  const ingTree = classes.major.map((m) => ({ m, subs: ingGroups.filter((x) => x.c.major === m.id) }));
   const picked = pick.map((id) => products.find((p) => p.id === id)).filter((p): p is Product => !!p);
 
   return (
@@ -259,14 +260,25 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                     {draft.sortMode === "ing" && (
                       <>
                         <h4>정렬할 성분 <span className="meta">고른 성분이 든 품목만 표시</span></h4>
-                        {ingGroups.map(({ c, items }) => (
-                          <div className="pgrp" key={c.id}>
-                            <div className="pgh"><span className="sw" style={{ background: c.color }} />{c.name}</div>
-                            <div className="pills">
-                              {items.map(({ g, n }) => (
-                                <button key={g.id} aria-pressed={draft.ingSel === g.id} onClick={() => d({ ingSel: g.id })}>{g.ko} <small>{n}</small></button>
-                              ))}
-                            </div>
+                        {ingTree.map(({ m, subs }) => (
+                          <div className="pmaj" key={m.id}>
+                            <div className="pmh">{m.name}</div>
+                            {subs.map(({ c, items }) => (
+                              <div className="pgrp" key={c.id}>
+                                {!(subs.length === 1 && c.name === m.name) && (
+                                  <div className="pgh"><span className="sw" style={{ background: c.color }} />{c.name}</div>
+                                )}
+                                {items.length ? (
+                                  <div className="pills">
+                                    {items.map(({ g, n }) => (
+                                      <button key={g.id} aria-pressed={draft.ingSel === g.id} onClick={() => d({ ingSel: g.id })}>{g.ko} <small>{n}</small></button>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <p className="none">해당 없음</p>
+                                )}
+                              </div>
+                            ))}
                           </div>
                         ))}
                       </>
