@@ -175,6 +175,14 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
         .filter((p) => p.ingredients[ingSel])
         .sort((a, b) => (desc ? -1 : 1) * (amt(a, ingSel) - amt(b, ingSel)) || a.name.localeCompare(b.name, "ko"))
     : visible;
+  // 공동 순위: 함량이 같으면 같은 번호 (예: 1, 1, 1, 4)
+  const rankOf = (idx: number) => {
+    if (!ingMode) return idx + 1;
+    const v = amt(listed[idx], ingSel);
+    let i = idx;
+    while (i > 0 && Math.abs(amt(listed[i - 1], ingSel) - v) < 1e-9) i--;
+    return i + 1;
+  };
   // 성분 선택 목록: 소분류별로 묶고, 지금 보이는 시리즈 중 그 성분이 든 품목 수 표시
   const ingGroups = classes.minor
     .map((c) => ({
@@ -317,7 +325,7 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                   <article className="card">
                     {ingMode && (
                       <div className="hl">
-                        <span className="rk">{idx + 1}</span>
+                        <span className="rk">{rankOf(idx)}</span>
                         {ingById.get(ingSel)?.ko}
                         <b>{fmt(amt(p, ingSel))}<small> mg</small></b>
                       </div>
