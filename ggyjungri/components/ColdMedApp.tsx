@@ -108,6 +108,11 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
       }))
       .filter((x) => x.subs.length);
 
+  // 중분류 이름 (진해제/거담제 등). 같은 중분류가 이어지는 첫 소분류 앞에만 제목 표시
+  const midName = (id?: string) => (id ? classes.mid?.find((x) => x.id === id)?.name : undefined);
+  const midStart = <T extends { c: Minor }>(arr: T[], i: number) =>
+    !!arr[i].c.mid && (i === 0 || arr[i - 1].c.mid !== arr[i].c.mid);
+
   // 소분류 이름이 대분류와 같으면(기타) 소분류 제목을 숨기고 대분류 옆에 색상 네모
   const soloColor = (m: Major, subs: Group["subs"]) =>
     subs.length === 1 && subs[0].c.name === m.name ? subs[0].c.color : null;
@@ -263,8 +268,9 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                         {ingTree.map(({ m, subs }) => (
                           <div className="pmaj" key={m.id}>
                             <div className="pmh">{m.name}</div>
-                            {subs.map(({ c, items }) => (
+                            {subs.map(({ c, items }, i) => (
                               <div className="pgrp" key={c.id}>
+                                {midStart(subs, i) && <div className="pmid">{midName(c.mid)}</div>}
                                 {!(subs.length === 1 && c.name === m.name) && (
                                   <div className="pgh"><span className="sw" style={{ background: c.color }} />{c.name}</div>
                                 )}
@@ -373,8 +379,9 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                             {sc && <span className="sw" style={{ background: sc }} />}
                             {m.name}
                           </div>
-                          {subs.map(({ c, rows }) => (
+                          {subs.map(({ c, rows }, i) => (
                             <div key={c.id}>
+                              {midStart(subs, i) && <div className="cmh">{midName(c.mid)}</div>}
                               {c.name !== m.name && (
                                 <div className="csh">
                                   <span className="sw" style={{ background: c.color }} />
@@ -473,7 +480,13 @@ export default function ColdMedApp({ classes, ingredients, series, products }: P
                           </td>
                           <td colSpan={picked.length} />
                         </tr>,
-                        ...subs.flatMap(({ c, rows }) => [
+                        ...subs.flatMap(({ c, rows }, i) => [
+                          midStart(subs, i) && (
+                            <tr className="mid" key={"mid-" + c.id}>
+                              <td className="rl">{midName(c.mid)}</td>
+                              <td colSpan={picked.length} />
+                            </tr>
+                          ),
                           c.name !== m.name && (
                             <tr className="sub" key={c.id}>
                               <td className="rl">

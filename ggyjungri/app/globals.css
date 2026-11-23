@@ -59,6 +59,7 @@ main { padding: 20px 0; }
 .trk i { display: block; height: 100%; border-radius: 4px; }
 .cg { margin-top: 14px; }
 .cgh { font-size: 18px; font-weight: 700; color: var(--ink); padding-top: 10px; border-top: 1px solid var(--line); margin-bottom: 2px; }
+.cmh { font-size: 15px; font-weight: 700; color: var(--ink); margin-top: 8px; padding-left: 2px; border-left: 3px solid var(--line); padding-left: 6px; }
 .csh { font-size: 15px; font-weight: 700; color: var(--mut); margin-top: 8px; display: flex; align-items: center; }
 .cgh .sw { width: 12px; height: 12px; margin-right: 8px; vertical-align: 1px; }
 .csh .sw { width: 11px; height: 11px; margin-right: 7px; flex: none; }
@@ -83,6 +84,9 @@ table.ct { border-collapse: collapse; width: 100%; font-size: 14px; }
 .ct th.rl, .ct td.rl { position: sticky; left: 0; background: var(--bg); min-width: 9.5em; z-index: 1; }
 .ct thead th.rl { background: var(--soft); }
 .ct tr.grp td { background: var(--soft); font-weight: 700; font-size: 13px; }
+.ct tr.mid td { font-weight: 700; font-size: 13px; }
+.ct tr.mid td.rl { padding-left: 14px; }
+.ct tr.sub td.rl { padding-left: 22px; }
 .ct tr.sub td { font-weight: 700; font-size: 13px; color: var(--mut); }
 .ct .v { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; }
 .ct .only .v, .ct .only td.rl > span:first-child { font-weight: 700; }
@@ -113,6 +117,7 @@ a { color: inherit; }
 .pills button[aria-pressed=true] small { color: inherit; opacity: .7; }
 .pgrp { margin-bottom: 6px; padding-left: 10px; }
 .pmaj { margin-top: 10px; }
+.pmid { font-size: 13px; font-weight: 700; color: var(--ink); margin: 6px 0 2px -4px; }
 .pmh { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
 .none { margin: 0 0 4px; font-size: 12px; color: var(--mut); }
 .pgh { font-size: 12px; color: var(--mut); margin: 6px 0 4px; display: flex; align-items: center; }
@@ -157,6 +162,7 @@ a { color: inherit; }
   .specs { font-size: 12px; gap: 2px 8px; padding-bottom: 6px; }
   .cg { margin-top: 6px; }
   .cgh { font-size: 14px; padding-top: 5px; }
+  .cmh { font-size: 13px; margin-top: 6px; }
   .csh { font-size: 12px; margin-top: 3px; }
   .ib { padding: 2px 0; }
   .ibh span { font-size: 13px; }

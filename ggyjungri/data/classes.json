@@ -11,19 +11,28 @@
       "en": "Antihistamine · Nasal decongestant"
     },
     {
-      "id": "C",
-      "name": "진해제",
-      "en": "Antitussive"
-    },
-    {
       "id": "D",
-      "name": "거담제",
-      "en": "Expectorant"
+      "name": "진해거담제",
+      "en": "Antitussive · Expectorant"
     },
     {
       "id": "E",
       "name": "기타",
       "en": "Others"
+    }
+  ],
+  "mid": [
+    {
+      "id": "cg",
+      "major": "D",
+      "name": "진해제",
+      "en": "Antitussive"
+    },
+    {
+      "id": "ex",
+      "major": "D",
+      "name": "거담제",
+      "en": "Expectorant"
     }
   ],
   "minor": [
@@ -57,14 +66,16 @@
     },
     {
       "id": "cgc",
-      "major": "C",
+      "major": "D",
+      "mid": "cg",
       "name": "중추성 진해제",
       "en": "Central antitussive",
       "color": "#1864ab"
     },
     {
       "id": "cgp",
-      "major": "C",
+      "major": "D",
+      "mid": "cg",
       "name": "말초성 진해제",
       "en": "Peripheral antitussive",
       "color": "#74c0fc"
@@ -72,6 +83,7 @@
     {
       "id": "exl",
       "major": "D",
+      "mid": "ex",
       "name": "점액용해제",
       "en": "Mucolytic",
       "color": "#0b7285"
@@ -79,6 +91,7 @@
     {
       "id": "exa",
       "major": "D",
+      "mid": "ex",
       "name": "점액활성제",
       "en": "Mucokinetic",
       "color": "#1098ad"
@@ -86,6 +99,7 @@
     {
       "id": "exm",
       "major": "D",
+      "mid": "ex",
       "name": "점액조절제",
       "en": "Mucoregulator",
       "color": "#3bc9db"
@@ -93,6 +107,7 @@
     {
       "id": "exe",
       "major": "D",
+      "mid": "ex",
       "name": "객담배출제",
       "en": "Expectorant (secretion-promoting)",
       "color": "#99e9f2"

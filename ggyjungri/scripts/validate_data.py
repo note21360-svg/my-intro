@@ -34,11 +34,22 @@ def main():
 
     # ---- 1. 분류(classes) 점검 ----
     major_ids = {m["id"] for m in classes["major"]}
+    # 중분류(선택): 대분류 안의 묶음
+    mid_major = {}
+    for md in classes.get("mid", []):
+        mid_major[md["id"]] = md["major"]
+        if md["major"] not in major_ids:
+            errors.append(f"중분류 {md['id']}: 대분류 '{md['major']}'가 없습니다")
     minor_ids = set()
     for c in classes["minor"]:
         minor_ids.add(c["id"])
         if c["major"] not in major_ids:
             errors.append(f"소분류 {c['id']}: 대분류 '{c['major']}'가 없습니다")
+        if c.get("mid"):
+            if c["mid"] not in mid_major:
+                errors.append(f"소분류 {c['id']}: 중분류 '{c['mid']}'가 없습니다")
+            elif mid_major[c["mid"]] != c["major"]:
+                errors.append(f"소분류 {c['id']}: 중분류 '{c['mid']}'의 대분류와 소분류의 대분류가 다릅니다")
         if not re.fullmatch(r"#[0-9a-fA-F]{6}", c.get("color", "")):
             errors.append(f"소분류 {c['id']}: 색상 형식이 #RRGGBB 가 아닙니다")
 

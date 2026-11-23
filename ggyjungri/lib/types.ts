@@ -1,6 +1,8 @@
 export type Major = { id: string; name: string; en: string };
-export type Minor = { id: string; major: string; name: string; en: string; color: string };
-export type Classes = { major: Major[]; minor: Minor[] };
+/** 중분류: 대분류 안의 묶음 (예: 진해거담제 → 진해제 / 거담제). 없는 대분류도 있음 */
+export type Mid = { id: string; major: string; name: string; en: string };
+export type Minor = { id: string; major: string; mid?: string; name: string; en: string; color: string };
+export type Classes = { major: Major[]; mid?: Mid[]; minor: Minor[] };
 
 export type Ingredient = {
   id: string;
